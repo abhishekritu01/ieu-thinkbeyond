@@ -11,7 +11,7 @@ const StudentTestimonial = () => {
             What Our Students Say
           </h2>
           <p className="text-zinc-400 text-lg">
-            Real stories from real achievers. Our students are not just learners — they're innovators and future leaders.
+            Real stories from real achievers. Our students are not just learners — they&apos;re innovators and future leaders.
           </p>
 
           {/* Quote Box */}
