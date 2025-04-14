@@ -24,3 +24,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.neon-orange {
+  color: #fb923c;
+  text-shadow: 0 0 5px #fb923c, 0 0 10px #fb923c, 0 0 20px #fb923c;
+}
+
+/* Glowing Pulse Animation */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 6px #fb923c, 0 0 12px #fb923c;
+  }
+  50% {
+    text-shadow: 0 0 10px #fb923c, 0 0 20px #fb923c;
+  }
+}
+
+.animate-glow {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Optional glowing button effect */
+.hover-glow-orange:hover {
+  box-shadow: 0 0 10px rgba(251, 146, 60, 0.6), 0 0 20px rgba(251, 146, 60, 0.4);
+}
+
+
+.dropShadow {
+  glow: '0 0 8px #fb923c, 0 0 16px #fb923c',
+}
