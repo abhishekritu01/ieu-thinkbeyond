@@ -71,7 +71,7 @@ const StudentTable = () => {
   if (loading) return <p className="p-4 text-white">Loading student data...</p>;
 
   return (
-    <div className="p-4 text-white">
+    <div className="p-4 text-white bg-gray-900 rounded-md shadow-md h-screen overflow-y-auto">
       {/* Search */}
       <div className="mb-4">
         <input
