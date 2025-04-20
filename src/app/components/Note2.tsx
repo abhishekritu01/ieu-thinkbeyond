@@ -1,42 +1,48 @@
+'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaLightbulb } from 'react-icons/fa';
+import Clock from 'react-clock';
+import 'react-clock/dist/Clock.css';
 
 const Note2 = () => {
+  const [value, setValue] = useState<Date | null>(null);
+
+  useEffect(() => {
+    const updateTime = () => setValue(new Date());
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="w-full bg-black border border-gray-700 rounded-2xl shadow-lg px-6 py-10 md:py-12 md:px-14 overflow-hidden">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+    <section className="w-full min-h-[400px] bg-black flex justify-center items-center py-12 px-6">
+      <div className="bg-white/10 border border-white/20 backdrop-blur-md rounded-3xl shadow-xl w-full max-w-6xl p-8 md:p-14 flex flex-col md:flex-row items-center gap-12">
         
-        {/* Left: Message + Promo Tags */}
-        <div className="flex-1 space-y-6">
-          {/* Quote + Icon */}
+        {/* Left Section: Quote & Tags */}
+        <div className="flex-1 text-center md:text-left space-y-6">
           <div className="flex items-start md:items-center gap-4">
-            <FaLightbulb className="text-yellow-400 text-4xl md:text-5xl animate-pulse mt-1" />
-            <p className="text-white text-xl sm:text-2xl md:text-3xl font-semibold leading-relaxed">
-              “We believe prodigies are not born — they are made through innovation, mentorship, and opportunity.”
+            <FaLightbulb className="text-yellow-300 text-5xl animate-pulse drop-shadow-md" />
+            <p className="text-white text-2xl md:text-3xl font-medium">
+              “Prodigies are made — through innovation, mentorship & opportunity.”
             </p>
           </div>
 
-          {/* Promotional Tags */}
-          <div className="flex flex-wrap gap-4">
-            <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:brightness-110 transition">
+          <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            <span className="bg-orange-500/80 hover:bg-orange-600 text-white px-6 py-2 rounded-full text-sm font-medium transition shadow">
               🎯 Early Bird Offer
             </span>
-            <span className="bg-gradient-to-r from-red-500 to-red-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:brightness-110 transition">
-              ⏳ Limited Seats Available!
+            <span className="bg-red-500/80 hover:bg-red-600 text-white px-6 py-2 rounded-full text-sm font-medium transition shadow">
+              ⏳ Limited Seats!
             </span>
           </div>
         </div>
 
-        {/* Right: Video Preview Card */}
-        <div className="w-full md:w-80 lg:w-96 rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-white transition hover:scale-[1.01]">
-          <iframe
-            className="w-full h-48 md:h-56 object-cover"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1&controls=1"
-            title="Promotional Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+        {/* Right Section: Clock */}
+        <div className="flex justify-center items-center w-full md:w-auto">
+          {value && (
+            <Clock value={value} size={220} renderNumbers={true} />
+          )}
         </div>
       </div>
     </section>

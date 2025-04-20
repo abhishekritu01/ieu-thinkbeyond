@@ -39,17 +39,16 @@
 
 
 
-import React from 'react';
-import NavBar from './components/NavBar';
+import Contact from './components/Contact';
+import CustomerReview from './components/CustomerReview';
+import Footer from './components/Footer';
+import HandsOnSchoolHeader from './components/HandsOnSchoolHeader';
 import HeroSection from './components/HeroSection';
+import NavBar from './components/NavBar';
 import Note from './components/Note';
 import Note2 from './components/Note2';
-import StudentTestimonial from './components/StudentTestimonial';
 import OurCurriculum from './components/OurCurriculum';
-import ParentTestimonial from './components/ParentTestimonial';
-import CustomerReview from './components/CustomerReview';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import StudentTestimonial from './components/StudentTestimonial';
 
 const Page = () => {
   return (
@@ -60,9 +59,10 @@ const Page = () => {
         <Note />
         <HeroSection />
         <Note2 />
+        <HandsOnSchoolHeader />
         <StudentTestimonial />
         <OurCurriculum />
-        <ParentTestimonial />
+        {/* <ParentTestimonial /> */}
         <CustomerReview />
         <Contact />
         <Footer />

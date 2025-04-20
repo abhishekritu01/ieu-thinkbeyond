@@ -2,6 +2,7 @@
 'use client';
 import React, { useState } from 'react';
 import { FaUserPlus, FaPhone, FaBars, FaTimes } from 'react-icons/fa';
+import Image from 'next/image';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,9 +11,16 @@ const NavBar = () => {
     <nav className="bg-black/30 backdrop-blur-lg border-b border-orange-400/30 px-6 py-5 shadow-2xl z-50 fixed top-0 left-0 w-full transition-all duration-300 ">
       <div className="flex items-center justify-between">
         {/* Logo / Brand */}
-        <div className="text-2xl sm:text-3xl font-extrabold tracking-widest text-orange-400 font-mono animate-glow">
+        {/* <div className="text-2xl sm:text-3xl font-extrabold tracking-widest text-orange-400 font-mono animate-glow">
           🤖 IEU
-        </div>
+        </div> */}
+        <Image 
+          src="/IEU.png"
+          alt="Logo"
+          width={100}
+          height={40}
+          className="h-12 w-auto sm:h-16 animate-glow bg-zinc-900 invert-100"
+        />
 
         {/* Hamburger icon for mobile */}
         <div

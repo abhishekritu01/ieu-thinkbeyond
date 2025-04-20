@@ -50,7 +50,7 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="mt-12 text-sm text-center text-zinc-600 border-t border-zinc-700 pt-6">
-        © {new Date().getFullYear()} Innovation & Entrepreneurship University. All rights reserved.
+        © {new Date().getFullYear()} Innovation & Entrepreneurship UNI. All rights reserved.
       </div>
     </footer>
   );

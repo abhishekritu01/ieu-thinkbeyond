@@ -26,6 +26,33 @@ const reviews = [
     review:
       'My daughter absolutely loves the hands-on sessions and mentorship. She’s more curious than ever!',
   },
+  
+  {
+    name: 'Ravi Kumar',
+    role: 'Tech Enthusiast',
+    avatar: 'https://randomuser.me/api/portraits/women/69.jpg',
+    stars: 4,
+    review:
+      'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
+  },
+  {
+    name: 'Sita Devi',
+    role: 'Parent of 10 y/o',
+    avatar: 'https://randomuser.me/api/portraits/women/62.jpg',
+    stars: 5,
+    review:
+      'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
+
+  },
+  {
+    name: 'Rahul Sharma',
+    role: 'Tech Entrepreneur',
+    avatar: 'https://randomuser.me/api/portraits/women/61.jpg',
+    stars: 5,
+    review:
+      'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
+  },
+
 ];
 
 const CustomerReview = () => {
