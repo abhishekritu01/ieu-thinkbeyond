@@ -31,7 +31,7 @@ const courses = [
     id: 1,
     title: 'ROBOTICS',
     description: "Design, build and program real robots to solve real-world challenges. Apply engineering concepts through hands-on kits and coding logic. Every session sparks invention and nurtures a creator’s mindset.",
-    image: 'robotics.jpg',
+    image: '/roboat.png',
     icon: <FaRobot />,
   },
   {
@@ -39,7 +39,7 @@ const courses = [
     title: 'CODING',
     description:
       'Go beyond syntax to build logic, games and automation tools. Blend front-end creativity with back-end logic to develop seamless web experiences and powerful digital solutions. Students learn to think, debug and innovate like real developers.',
-    image: 'coding.jpg',
+    image: 'coding.png',
     icon: <FaLaptopCode />,
   },
   {
@@ -47,7 +47,8 @@ const courses = [
     title: 'ARTIFICIAL INTELLIGENCE',
     description:
       'Step into tomorrow by training machines to think and act smartly. From smart assistants to self-learning games—build the AI of your dreams. A foundation in data science and logic through hands-on tools.',
-    icon: <FaLightbulb />,
+    image: 'ai.png',
+      icon: <FaLightbulb />,
   },
   {
     id: 4,
@@ -70,7 +71,7 @@ const courses = [
     title: 'ELECTRONICS',
     description:
       'Explore the building blocks of technology through circuits and sensors. Learn how current, resistance and voltage power our digital world. Projects teach not just what to build—but why it works.',
-    image: 'electronics.jpg',
+    image: 'electronics.png',
     icon: <FaCogs />,
   },
   {
@@ -94,7 +95,7 @@ const courses = [
     title: '3D PRINTING',
     description:
       'Transform ideas into real objects using digital design and fabrication. Students design, slice, and print usable tools and creative models. A gateway to entrepreneurship and innovation in product design.',
-    image: '3d_printing.jpg',
+    image: '3d_printing.png',
     icon: <FaPrint />,
   },
   {
@@ -102,7 +103,7 @@ const courses = [
     title: 'STARTUP ECOSYSTEM',
     description:
       'Explore how ideas become companies through team-building and growth. Understand funding, scalability, incubation and networking.',
-    image: 'startup_ecosystem.jpg',
+    image: 'startup_ecosystem.png',
     icon: <FaBuilding />,
   },
   {
@@ -110,7 +111,7 @@ const courses = [
     title: 'PUBLIC SPEAKING',
     description:
       'Build confidence to speak with clarity and purpose in any room. From pitches to debates—students find their authentic voice. Fosters self-belief, articulation and leadership.',
-    image: 'public_speaking.jpg',
+    image: 'public_speaking.png',
     icon: <FaBullhorn />,
   },
   {
@@ -118,7 +119,7 @@ const courses = [
     title: 'DIGITAL COMMERCE',
     description:
       'Learn how online businesses operate in the global market. From building e-stores to managing customer experience. A full-stack introduction to the future of business.',
-    image: 'digital_commerce.jpg',
+    image: 'digital_commerce.png',
     icon: <FaShoppingCart />,
   },
   {
@@ -126,7 +127,7 @@ const courses = [
     title: 'ENTREPRENEURSHIP',
     description:
       'Transform problems into ventures through ideation and execution. Students learn business planning, prototyping and pitching. A real-world startup experience—age is no barrier.',
-    image: 'entrepreneurship.jpg',
+    image: 'entrepreneurship.png',
     icon: <FaChartLine />,
   },
   {
@@ -134,7 +135,7 @@ const courses = [
     title: 'DESIGN THINKING',
     description:
       'Students learn to observe, prototype, test and iterate. Solve problems with empathy, creativity, and innovation. A mindset that turns problems into possibilities.',
-    image: 'design_thinking.jpg',
+    image: 'design_thinking.png',
     icon: <FaPenNib />,
   },
   {
@@ -142,7 +143,7 @@ const courses = [
     title: 'CONTENT WRITING',
     description:
       'Write with impact — whether it’s a story, blog or brand copy. Learn to research, structure and express ideas that influence. Sharpen the most powerful tool in business communication.',
-    image: 'content_writing.jpg',
+    image: 'content.png',
     icon: <FaPenNib />,
   },
   {
@@ -150,7 +151,7 @@ const courses = [
     title: 'FINANCIAL LITERACY',
     description:
       'Understand how money works—from budgeting to investing. Interactive tools and games simulate real financial decisions. Empowers students to take charge of their financial future early on.',
-    image: 'financial_literacy.jpg',
+    image: 'financial_literacy.png',
     icon: <FaMoneyBillWave />,
   },
   {
@@ -158,7 +159,7 @@ const courses = [
     title: 'BRANDING',
     description:
       'Create memorable brands with logos, stories and strategy. Learn how emotional connection builds business value. Students get hands-on with real branding campaigns.',
-    image: 'branding.jpg',
+    image: 'branding.png',
     icon: <FaTrademark />,
   },
   {
@@ -166,7 +167,7 @@ const courses = [
     title: 'SALES & CAMPAIGN MANAGEMENT',
     description:
       'Discover how to attract, convert and retain customers. Students build real campaigns, analyze markets and drive conversions. Practical, fun, and filled with high-energy role-play simulations.',
-    image: 'sales_campaign_management.jpg',
+    image: 'sales.png',
     icon: <FaHandshake />,
   },
 ];
@@ -206,7 +207,7 @@ const OurCurriculum = () => {
                 <div className="w-full md:w-1/2">
                   <div className="w-full h-64 md:h-72 rounded-2xl overflow-hidden bg-zinc-800 flex items-center justify-center">
                     <img
-                      src={`/images/${course.image}`}
+                      src={`${course.image}`}
                       alt={course.title}
                       className="object-cover w-full h-full"
                     />
