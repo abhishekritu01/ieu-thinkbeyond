@@ -1,6 +1,16 @@
 import mongoose from 'mongoose';
 
 const studentSchema = new mongoose.Schema({
+  parentName: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  city: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   fullName: {
     type: String,
     required: true,

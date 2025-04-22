@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
+import { FaUserPlus } from 'react-icons/fa';
 
 const StudentTestimonial = () => {
   return (
@@ -49,7 +50,16 @@ const StudentTestimonial = () => {
             ></iframe>
           </div>
         </div>
+        <p>
+        <a
+          href="#register"
+          className="flex items-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300 w-36"
+        >
+          <FaUserPlus /> Register
+        </a>
+      </p>
       </div>
+      
     </section>
   );
 };

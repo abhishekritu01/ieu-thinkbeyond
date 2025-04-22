@@ -6,10 +6,10 @@ export async function POST(request: Request) {
   await Connect(); // Ensure the DB is connected before proceeding
 
   const body = await request.json(); // Parse the JSON body
-  const { fullName, age, grade, email, contactNumber } = body;
+  const {parentName, fullName, age, grade, email, contactNumber,city, } = body;
 
   // Validate input fields
-  if (!fullName || !age || !grade || !email || !contactNumber) {
+  if (!fullName || !age || !grade || !email || !contactNumber || !city || !parentName) {
     return NextResponse.json({ message: "All fields are required" }, { status: 400 });
   }
 
@@ -26,6 +26,8 @@ export async function POST(request: Request) {
       grade,
       email,
       contactNumber,
+      city,
+      parentName,
     });
 
     // Save the student document in the database

@@ -30,8 +30,8 @@ const Footer = () => {
           <h4 className="text-white font-semibold text-lg mb-4">Contact</h4>
           <ul className="space-y-2 text-sm">
             <li>Email: <a href="mailto:hello@innovationuni.com" className="hover:text-white transition">hello@innovationuni.com</a></li>
-            <li>Phone: +91 98765 43210</li>
-            <li>Location: Bengaluru, India</li>
+            <li>Phone: +91 89512 58207 / 9686593948</li>
+            <li>Location: 1A, KRS Rd, next to Mandovi Motors, Devaraja Mohalla, CFTRI Campus, Yadavagiri, Mysuru, Karnataka 570005 </li>
           </ul>
         </div>
 

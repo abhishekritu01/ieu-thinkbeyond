@@ -88,6 +88,8 @@ const StudentTable = () => {
         <table className="min-w-full text-sm border border-gray-700 rounded-md bg-gray-900 text-white">
           <thead>
             <tr className="bg-gray-800">
+              <th className="py-2 px-3 border border-gray-700">Parent Name</th>
+              <th className="py-2 px-3 border border-gray-700">City</th>
               <th className="py-2 px-3 border border-gray-700">Full Name</th>
               <th className="py-2 px-3 border border-gray-700">Age</th>
               <th className="py-2 px-3 border border-gray-700">Grade</th>
@@ -97,8 +99,10 @@ const StudentTable = () => {
             </tr>
           </thead>
           <tbody>
-            {currentStudents.map((student: { _id: string; fullName: string; age: number; grade: string; email: string; contactNumber: string }) => (
+            {currentStudents.map((student: { _id: string; fullName: string; age: number; grade: string; email: string; contactNumber: string; parentName: string; city: string }) => (
               <tr key={student._id} className="hover:bg-gray-800">
+                <td className="py-2 px-3 border border-gray-700">{student.parentName}</td>
+                <td className="py-2 px-3 border border-gray-700">{student.city}</td>
                 <td className="py-2 px-3 border border-gray-700">{student.fullName}</td>
                 <td className="py-2 px-3 border border-gray-700">{student.age}</td>
                 <td className="py-2 px-3 border border-gray-700">{student.grade}</td>

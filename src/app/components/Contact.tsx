@@ -3,31 +3,37 @@
 import React, { useState } from 'react';
 import { FaSpinner } from 'react-icons/fa'; // Spinner icon
 
+interface FormData {
+  fullName: string;
+  age: string;
+  grade: string;
+  email: string;
+  contactNumber: string;
+  city: string;
+  parentName: string;
+}
+
+interface ChangeEvent {
+  target: {
+    name: string;
+    value: string;
+  };
+}
+
 const Register = () => {
   const [formData, setFormData] = useState({
     fullName: '',
+    parentName: '',
     age: '',
     grade: '',
     email: '',
     contactNumber: '',
+    city: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false); // 👈 Track submission state
 
-  interface FormData {
-    fullName: string;
-    age: string;
-    grade: string;
-    email: string;
-    contactNumber: string;
-  }
 
-  interface ChangeEvent {
-    target: {
-      name: string;
-      value: string;
-    };
-  }
 
   const handleChange = (e: ChangeEvent) => {
     const { name, value } = e.target;
@@ -65,6 +71,8 @@ const Register = () => {
           grade: '',
           email: '',
           contactNumber: '',
+          city: '',
+          parentName: '',
         });
       } else {
         const data = await response.json();
@@ -97,10 +105,12 @@ const Register = () => {
         <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900 p-8 rounded-2xl shadow-lg border border-zinc-700">
           {/* Input Fields */}
           {[
+            { label: "Parent's Name", type: "text", name: "parentName", placeholder: "Enter your parent's name" },
             { label: "Full Name", type: "text", name: "fullName", placeholder: "Enter your full name" },
             { label: "Age", type: "number", name: "age", placeholder: "Age", min: 5, max: 18 },
             { label: "Email Address", type: "email", name: "email", placeholder: "you@example.com" },
             { label: "Contact Number", type: "tel", name: "contactNumber", placeholder: "10-digit mobile number", pattern: "[0-9]{10}" },
+            { label: "City", type: "text", name: "city", placeholder: "Enter your city" },
           ].map((input, i) => (
             <div key={i}>
               <label className="block text-sm text-zinc-300 mb-1">{input.label}</label>
