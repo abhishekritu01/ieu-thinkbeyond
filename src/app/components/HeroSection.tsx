@@ -62,7 +62,7 @@ const HeroSection = () => {
           className="w-full h-full object-cover opacity-40"
           controls={autoplayFailed}
         >
-          <source src="/IEU-Founder-Intro-Video.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745768281/IEU_Founder_Intro_Video_2_sfokd7.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>

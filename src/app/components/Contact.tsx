@@ -312,7 +312,7 @@ const Register = () => {
           <div className="relative rounded-xl overflow-hidden shadow-2xl border border-zinc-700/50 group">
             <video
               ref={videoRef}
-              src="/IEU-Founder-Intro-Video.mp4"
+              src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745768281/IEU_Founder_Intro_Video_2_sfokd7.mp4"
               width="100%"
               height="auto"
                className="w-full h-auto max-h-[500px] object-cover"
