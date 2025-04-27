@@ -1,20 +1,17 @@
-
 'use client';
 import React, { useState } from 'react';
 import { FaUserPlus, FaPhone, FaBars, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
+import { FaPhoneVolume } from "react-icons/fa";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-black/30 backdrop-blur-lg border-b border-orange-400/30 px-6 py-5 shadow-2xl z-50 fixed top-0 left-0 w-full transition-all duration-300 ">
+    <nav className="bg-black/30 backdrop-blur-lg border-b border-orange-400/30 px-6 py-5 shadow-2xl z-50 fixed top-0 left-0 w-full transition-all duration-300">
       <div className="flex items-center justify-between">
         {/* Logo / Brand */}
-        {/* <div className="text-2xl sm:text-3xl font-extrabold tracking-widest text-orange-400 font-mono animate-glow">
-          🤖 IEU
-        </div> */}
-        <Image 
+        <Image
           src="/IEU.png"
           alt="Logo"
           width={100}
@@ -35,17 +32,17 @@ const NavBar = () => {
           <li>
             <a
               href="#register"
-              className="flex text-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300 "
+              className="flex items-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300"
             >
               <FaUserPlus /> Register
             </a>
           </li>
           <li>
             <a
-              href="#contact"
+              href="tel:+8951258207"
               className="flex items-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300"
             >
-              <FaPhone /> Contact Us
+              <FaPhoneVolume /> Contact Us
             </a>
           </li>
         </ul>
@@ -53,7 +50,7 @@ const NavBar = () => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden mt-4 space-y-4">
+        <div className="md:hidden mt-4 space-y-4 bg-black/60 backdrop-blur-lg rounded-lg p-4">
           <a
             href="#register"
             className="block text-center px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 transition duration-300"
@@ -62,7 +59,7 @@ const NavBar = () => {
             <FaUserPlus className="inline mr-2" /> Register
           </a>
           <a
-            href="#contact"
+            href="tel:+8951258207"
             className="block text-center px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 transition duration-300"
             onClick={() => setMenuOpen(false)}
           >
@@ -75,4 +72,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

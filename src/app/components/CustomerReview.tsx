@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+
 import { FaStar } from 'react-icons/fa';
 import { FaUserPlus } from 'react-icons/fa';
 
@@ -27,7 +28,6 @@ const reviews = [
     review:
       'My daughter absolutely loves the hands-on sessions and mentorship. She’s more curious than ever!',
   },
-  
   {
     name: 'Ravi Kumar',
     role: 'Tech Enthusiast',
@@ -43,7 +43,6 @@ const reviews = [
     stars: 5,
     review:
       'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
-
   },
   {
     name: 'Rahul Sharma',
@@ -53,7 +52,6 @@ const reviews = [
     review:
       'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
   },
-
 ];
 
 const CustomerReview = () => {
@@ -70,29 +68,32 @@ const CustomerReview = () => {
               key={idx}
               className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
+              {/* Avatar */}
               <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={review.avatar}
-                  alt={review.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-cyan-400"
-                />
+                <div className="w-14 h-14 rounded-full bg-orange-400 text-white flex items-center justify-center font-semibold">
+                  {review.name[0]}
+                </div>
                 <div>
                   <h4 className="text-lg font-semibold">{review.name}</h4>
                   <p className="text-sm text-zinc-400">{review.role}</p>
                 </div>
               </div>
 
+              {/* Rating */}
               <div className="flex items-center gap-1 text-yellow-400 mb-3">
                 {Array.from({ length: review.stars }).map((_, i) => (
                   <FaStar key={i} />
                 ))}
               </div>
 
+              {/* Review Content */}
               <p className="text-zinc-300 text-sm">{review.review}</p>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Register Button */}
       <div className="flex justify-center mt-8">
         <a
           href="#register"

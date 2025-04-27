@@ -18,10 +18,10 @@ const Footer = () => {
         <div>
           <h4 className="text-white font-semibold text-lg mb-4">Explore</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#about" className="hover:text-white transition">About</a></li>
-            <li><a href="#courses" className="hover:text-white transition">Courses</a></li>
-            <li><a href="#testimonials" className="hover:text-white transition">Testimonials</a></li>
-            <li><a href="#contact" className="hover:text-white transition">Contact</a></li>
+            <li><a href="#about" className="hover:text-orange-400 transition">About</a></li>
+            <li><a href="#courses" className="hover:text-orange-400 transition">Courses</a></li>
+            <li><a href="#testimonials" className="hover:text-orange-400 transition">Testimonials</a></li>
+            <li><a href="#contact" className="hover:text-orange-400 transition">Contact</a></li>
           </ul>
         </div>
 
@@ -29,9 +29,9 @@ const Footer = () => {
         <div>
           <h4 className="text-white font-semibold text-lg mb-4">Contact</h4>
           <ul className="space-y-2 text-sm">
-            <li>Email: <a href="mailto:hello@innovationuni.com" className="hover:text-white transition">hello@innovationuni.com</a></li>
+            <li>Email: <a href="mailto:hello@innovationuni.com" className="hover:text-orange-400 transition">hello@innovationuni.com</a></li>
             <li>Phone: +91 89512 58207 / 9686593948</li>
-            <li>Location: 1A, KRS Rd, next to Mandovi Motors, Devaraja Mohalla, CFTRI Campus, Yadavagiri, Mysuru, Karnataka 570005 </li>
+            <li>Location: 1A, KRS Rd, next to Mandovi Motors, Devaraja Mohalla, CFTRI Campus, Yadavagiri, Mysuru, Karnataka 570005</li>
           </ul>
         </div>
 

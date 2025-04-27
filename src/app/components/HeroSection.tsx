@@ -1,167 +1,129 @@
-// import React from 'react';
 
-
-// const HeroSection = () => {
-//   return (
-//     <section className="relative bg-black text-white min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
-
-//       {/* Neon Glow Circles */}
-//       <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-orange-500 rounded-full blur-3xl opacity-20 animate-pulse z-0"></div>
-//       <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-cyan-400 rounded-full blur-3xl opacity-20 animate-pulse z-0"></div>
-
-//       {/* Content */}
-//       <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
-
-//         {/* Left: Text */}
-//         <div className="text-center lg:text-left space-y-6 max-w-xl">
-//           <h1 className="text-5xl font-extrabold leading-tight text-orange-400 drop-shadow-[0_0_15px_#fb923c]">
-//             🤖 Welcome to <br /> <span className="text-cyan-400">Innovation & Entrepreneurship University</span>
-//           </h1>
-//           <p className="text-lg text-gray-300">
-//             Unleashing next-gen robotics and startup leaders through creativity, tech & vision.
-//           </p>
-//           <a
-//             href="#about"
-//             className="inline-block px-6 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 shadow-lg hover:shadow-orange-400/60 transition-all duration-300"
-//           >
-//             Learn More
-//           </a>
-//         </div>
-
-//         {/* Right: Image */}
-//         <div className="max-w-md w-full drop-shadow-[0_0_20px_#22d3ee] hover:scale-105 transition-transform duration-500">
-//           <img
-//             src='/rob02.webp'
-//             alt="Robot illustration"
-//             className="w-full h-auto rounded-2xl object-cover invert saturate-0 brightness-200 contrast-125"
-//           />
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HeroSection;
-
-
-
-
-
-// import React from 'react';
-
-// // List of YouTube video IDs (You can add more IDs to the array)
-// const videoIds = [
-//   'dQw4w9WgXcQ', // Example video ID
-//   '3JZ_D3ELwOQ', // Another example video ID
-//   'nq2zK5nlguY', // Add more IDs here as needed
-// ];
+// 'use client';
+// import React, { useRef, useEffect, useState } from 'react';
+// import { FaUserPlus } from 'react-icons/fa';
+// import { IoVolumeMute } from 'react-icons/io5';
+// import { IoMdVolumeMute } from 'react-icons/io';
 
 // const HeroSection = () => {
-//   // Function to get a random video ID
-//   const getRandomVideoId = () => {
-//     const randomIndex = Math.floor(Math.random() * videoIds.length);
-//     return videoIds[randomIndex];
+//   const videoRef = useRef<HTMLVideoElement>(null);
+//   const [isMuted, setIsMuted] = useState(true);
+//   const [autoplayFailed, setAutoplayFailed] = useState(false);
+
+//   useEffect(() => {
+//     const video = videoRef.current;
+//     if (!video) return;
+
+//     video.muted = true; // Start with video muted
+//     video.controls = false; // Disable controls initially
+
+//     const playPromise = video.play();
+//     if (playPromise !== undefined) {
+//       playPromise
+//         .then(() => {
+//           setAutoplayFailed(false);
+//         })
+//         .catch((error) => {
+//           console.log('Autoplay prevented:', error);
+//           setAutoplayFailed(true);
+//           video.controls = true;
+//         });
+//     }
+
+//     const handleEnded = () => {
+//       video.currentTime = 0;
+//       video.play().catch(console.error);
+//     };
+
+//     video.addEventListener('ended', handleEnded);
+
+//     return () => {
+//       video.removeEventListener('ended', handleEnded);
+//     };
+//   }, []);
+
+//   const handleMuteToggle = () => {
+//     const video = videoRef.current;
+//     if (video) {
+//       video.muted = !isMuted;
+//       setIsMuted(!isMuted);
+//     }
+//   };
+
+//   const handlePlayClick = () => {
+//     const video = videoRef.current;
+//     if (video) {
+//       video.play()
+//         .then(() => {
+//           setAutoplayFailed(false);
+//         })
+//         .catch((error) => {
+//           console.log('Play failed after click:', error);
+//         });
+//     }
 //   };
 
 //   return (
-//     <section className="relative bg-black text-white min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
-
-//       {/* Full Screen Video Background */}
-//       <div className="absolute inset-0 w-full h-full overflow-hidden">
-//         <iframe
-//           className="w-full h-full object-cover"
-//           src={`https://www.youtube.com/embed/${getRandomVideoId()}?autoplay=1&mute=1&loop=1&playlist=${getRandomVideoId()}`}
-//           title="Hero Video"
-//           frameBorder="0"
-//           allow="autoplay; encrypted-media"
-//           allowFullScreen
-//         />
+//     <section className="relative bg-black text-white min-h-screen flex items-center overflow-hidden">
+//       {/* Background Video */}
+//       <div className="absolute inset-0 z-0">
+//         <video
+//           ref={videoRef}
+//           autoPlay
+//           loop
+//           muted={isMuted}
+//           playsInline
+//           className="w-full h-full object-cover opacity-40"
+//           controls={autoplayFailed}
+//         >
+//           <source src="/IEU Founder Intro Video.mp4" type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+//         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
 //       </div>
-
-//       {/* Overlay */}
-//       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
 //       {/* Content */}
-//       <div className="relative z-10 max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
-
-//         {/* Left: Text */}
-//         <div className="space-y-8 max-w-xl">
-//           <h1 className="text-6xl font-bold text-orange-400 leading-tight tracking-wide drop-shadow-[0_0_30px_#fb923c]">
-//             🤖 Welcome to <br />
-//             <span className="text-cyan-400">Innovation & Entrepreneurship University</span>
-//           </h1>
-//           <p className="text-lg text-gray-300 max-w-lg mx-auto">
-//             Unleashing next-gen robotics and startup leaders through creativity, technology, and vision.
-//           </p>
-//           <a
-//             href="#about"
-//             className="inline-block px-8 py-4 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-//           >
-//             Learn More
-//           </a>
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HeroSection;
-
-
-
-// import React from 'react';
-
-// const videoIds = [
-//   'dQw4w9WgXcQ', // Example video ID
-//   '3JZ_D3ELwOQ', // Another example video ID
-//   'nq2zK5nlguY', // Add more IDs here as needed
-// ];
-
-// const HeroSection = () => {
-//   const getRandomVideoId = () => {
-//     const randomIndex = Math.floor(Math.random() * videoIds.length);
-//     return videoIds[randomIndex];
-//   };
-
-//   const videoId = getRandomVideoId();
-
-//   return (
-//     <section className="bg-black text-white py-20 px-6 lg:px-20">
-//       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-//         {/* Left: Text Content */}
-//         <div className="w-full space-y-8">
-//           <h1 className="text-4xl sm:text-5xl font-extrabold text-orange-400 leading-tight">
-//             🤖 Welcome to <br />
-//             <span className="text-cyan-400">Innovation & Entrepreneurship University</span>
-//           </h1>
-//           <p className="text-zinc-300 text-lg">
-//             Unleashing next-gen robotics and startup leaders through creativity, technology, and vision.
-//           </p>
-//           {/* <a
-//             href="#about"
-//             className="inline-block px-8 py-4 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-//           >
-//             Learn More
-//           </a> */}
-//         </div>
-
-//         {/* Right: Video Section */}
-//         <div className="w-full">
-//           <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl border-4 border-zinc-700">
-//             <iframe
-//               className="w-full h-full"
-//               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}`}
-//               title="Hero Video"
-//               frameBorder="0"
-//               allow="autoplay; encrypted-media"
-//               allowFullScreen
-//             />
+//       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+//         <div className="w-full lg:w-1/2 space-y-6 lg:space-y-8">
+//           <div className="space-y-4">
+//             <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">
+//               Innovation Education
+//             </span>
+//             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+//               Empowering <span className="text-orange-400">Future Innovators</span>
+//             </h1>
 //           </div>
-//         </div>
 
+//           <h2 className="text-cyan-400 text-2xl sm:text-3xl font-semibold">
+//             Join Our Robotics & AI Programs
+//           </h2>
+
+//           <p className="text-gray-300 text-lg leading-relaxed">
+//             Master cutting-edge technologies through hands-on projects, expert mentorship,
+//             and real-world applications. Flexible learning modes designed for the next
+//             generation of innovators and creators.
+//           </p>
+
+//           <div className="flex flex-wrap gap-4 pt-2">
+//             <div className="flex justify-center mt-8">
+//               <a
+//                 href="#register"
+//                 className="flex items-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300 w-36"
+//               >
+//                 <FaUserPlus /> Register
+//               </a>
+//             </div>
+//             <button
+//               onClick={handleMuteToggle}
+//               className="flex items-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300 w-36 mt-8 justify-center"
+//             >
+//               {isMuted ? <IoVolumeMute /> : <IoMdVolumeMute />}
+//               {isMuted ? 'Unmute' : 'Mute'}
+//             </button>
+
+//           </div>
+
+//         </div>
 //       </div>
 //     </section>
 //   );
@@ -170,52 +132,120 @@
 // export default HeroSection;
 
 
-import React from 'react';
+
+
+
+'use client';
+import React, { useRef, useEffect, useState } from 'react';
+import { FaUserPlus } from 'react-icons/fa';
+import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 const HeroSection = () => {
-  return (
-    <section className="bg-black text-white py-20 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        
-        {/* Left: Text Content */}
-        <div className="w-full md:w-1/2 space-y-6">
-          <h1 className="text-4xl sm:text-5xl font-bold text-orange-400 leading-tight">
-            🚀 Empowering Future Innovators
-          </h1>
-          <h2 className="text-cyan-400 text-2xl sm:text-3xl font-semibold">
-            Join Our Online & Offline Robotics Program
-          </h2>
-          <p className="text-zinc-300 text-lg">
-            Learn cutting-edge robotics through hands-on projects, expert mentorship, and real-world innovation.
-            Flexible learning modes, for every young innovator.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="#courses"
-              className="px-6 py-3 bg-orange-500 rounded-md text-white font-medium hover:bg-orange-600 shadow-md transition transform hover:scale-105"
-            >
-              Explore Courses
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 bg-transparent border border-cyan-400 text-cyan-300 rounded-md font-medium hover:bg-cyan-900 hover:text-white transition transform hover:scale-105"
-            >
-              Talk to Us
-            </a>
-          </div>
-        </div>
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+  const [autoplayFailed, setAutoplayFailed] = useState(false);
 
-        {/* Right: Video or Image */}
-        <div className="w-full md:w-1/2">
-          <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-zinc-700">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ"
-              title="Robotics Program Promo"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            />
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = true; // Start with video muted
+    video.controls = false; // Disable controls initially
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setAutoplayFailed(false);
+        })
+        .catch((error) => {
+          console.log('Autoplay prevented:', error);
+          setAutoplayFailed(true);
+          video.controls = true;
+        });
+    }
+
+    const handleEnded = () => {
+      video.currentTime = 0;
+      video.play().catch(console.error);
+    };
+
+    video.addEventListener('ended', handleEnded);
+
+    return () => {
+      video.removeEventListener('ended', handleEnded);
+    };
+  }, []);
+
+  const handleMuteToggle = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  return (
+    <section className="relative bg-black text-white min-h-screen flex items-center overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted={isMuted}
+          playsInline
+          className="w-full h-full object-cover opacity-40"
+          controls={autoplayFailed}
+        >
+          <source src="/IEU Founder Intro Video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+        
+        {/* Mute Button - Top Right Corner */}
+        <button
+          onClick={handleMuteToggle}
+          className="absolute top-4 right-4 z-20 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-all"
+          aria-label={isMuted ? "Unmute video" : "Mute video"}
+        >
+          {isMuted ? (
+            <FaVolumeMute className="text-white text-xl" />
+          ) : (
+            <FaVolumeUp className="text-white text-xl" />
+          )}
+        </button>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+        <div className="w-full lg:w-1/2 space-y-6 lg:space-y-8">
+          <div className="space-y-4">
+            <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">
+              Innovation Education
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Empowering <span className="text-orange-400">Future Innovators</span>
+            </h1>
+          </div>
+
+          <h2 className="text-cyan-400 text-2xl sm:text-3xl font-semibold">
+            Join Our Robotics & AI Programs
+          </h2>
+
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Master cutting-edge technologies through hands-on projects, expert mentorship,
+            and real-world applications. Flexible learning modes designed for the next
+            generation of innovators and creators.
+          </p>
+
+          <div className="flex flex-wrap gap-4 pt-2">
+            <a
+              href="#register"
+              className="flex items-center gap-2 px-6 py-3 rounded-md bg-orange-500 text-white hover:bg-orange-600 hover:shadow-lg transition-all duration-300"
+            >
+              <FaUserPlus /> Register Now
+            </a>
           </div>
         </div>
       </div>
