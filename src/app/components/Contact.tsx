@@ -273,6 +273,7 @@ const Register = () => {
       }
     } catch (error) {
       alert('Network error. Please try again later.');
+      console.error('Error:', error);
     } finally {
       setIsSubmitting(false);
     }

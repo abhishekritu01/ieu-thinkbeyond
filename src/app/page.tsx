@@ -4,7 +4,6 @@ import Footer from './components/Footer';
 import HandsOnSchoolHeader from './components/HandsOnSchoolHeader';
 import HeroSection from './components/HeroSection';
 import NavBar from './components/NavBar';
-import Note from './components/Note';
 import Note2 from './components/Note2';
 import OurCurriculum from './components/OurCurriculum';
 import StudentTestimonial from './components/StudentTestimonial';
