@@ -234,6 +234,7 @@ const StudentTestimonial = () => {
             playsInline
             className="w-full h-auto max-h-[500px] object-cover"
           >
+            {/* <source src="/Student Testimonial IEU Landing Page.mp4" type="video/mp4" /> */}
             <source src="/Student Testimonial IEU Landing Page.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
