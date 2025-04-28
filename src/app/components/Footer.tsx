@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
           <h2 className="text-white text-2xl font-bold mb-3">Innovation Uni</h2>
           <p className="text-sm leading-relaxed">
-            Empowering the next generation of innovators through technology, mentorship, and entrepreneurship.
+            Empowering the next generation of innovators through technology, mentorship and entrepreneurship.
           </p>
         </div>
 
@@ -30,7 +30,8 @@ const Footer = () => {
           <h4 className="text-white font-semibold text-lg mb-4">Contact</h4>
           <ul className="space-y-2 text-sm">
             <li>Email: <a href="mailto:hello@innovationuni.com" className="hover:text-orange-400 transition">hello@innovationuni.com</a></li>
-            <li>Phone: +91 89512 58207 / 9686593948</li>
+            <li>Phone: +91 89512 58207&nbsp;&nbsp;/&nbsp;&nbsp;+91 96865 93948</li>
+
             <li>Location: 1A, KRS Rd, next to Mandovi Motors, Devaraja Mohalla, CFTRI Campus, Yadavagiri, Mysuru, Karnataka 570005</li>
           </ul>
         </div>

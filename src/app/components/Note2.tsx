@@ -25,13 +25,13 @@ const Note2 = () => {
   return (
     <section className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center p-6">
       <div className="w-full max-w-7xl bg-white/10 border border-white/20 backdrop-blur-lg rounded-3xl shadow-2xl p-6 sm:p-10 md:p-14 flex flex-col md:flex-row items-center gap-10">
-        
+
         {/* Quote Section */}
         <div className="flex-1 text-center md:text-left space-y-6">
           <div className="flex items-center gap-4 justify-center md:justify-start">
             <FaLightbulb className="text-yellow-300 text-4xl md:text-5xl animate-pulse" />
             <p className="text-white text-xl sm:text-2xl md:text-3xl font-semibold leading-snug">
-              “Prodigies are made — through innovation, mentorship & opportunity.”
+            &ldquo;We Believe Prodigies Are Not Born  Are Made&ldquo;
             </p>
           </div>
 

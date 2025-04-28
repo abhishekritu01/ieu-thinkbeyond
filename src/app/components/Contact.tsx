@@ -1,205 +1,3 @@
-// 'use client';
-
-// import React, { useState } from 'react';
-// import { FaSpinner } from 'react-icons/fa'; // Spinner icon
-
-// interface FormData {
-//   fullName: string;
-//   age: string;
-//   grade: string;
-//   email: string;
-//   contactNumber: string;
-//   city: string;
-//   parentName: string;
-// }
-
-// interface ChangeEvent {
-//   target: {
-//     name: string;
-//     value: string;
-//   };
-// }
-
-// const Register = () => {
-//   const [formData, setFormData] = useState({
-//     fullName: '',
-//     parentName: '',
-//     age: '',
-//     grade: '',
-//     email: '',
-//     contactNumber: '',
-//     city: '',
-//   });
-
-//   const [isSubmitting, setIsSubmitting] = useState(false); // 👈 Track submission state
-
-
-
-//   const handleChange = (e: ChangeEvent) => {
-//     const { name, value } = e.target;
-//     setFormData((prev: FormData) => ({
-//       ...prev,
-//       [name]: value,
-//     }));
-//   };
-
-//   interface SubmitEvent {
-//     preventDefault: () => void;
-//   }
-
-//   interface ApiResponse {
-//     ok: boolean;
-//     json: () => Promise<{ message?: string }>;
-//   }
-
-//   const handleSubmit = async (e: SubmitEvent) => {
-//     e.preventDefault();
-//     setIsSubmitting(true); // Start spinner
-
-//     try {
-//       const response: ApiResponse = await fetch('/api/register', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify(formData),
-//       });
-
-//       if (response.ok) {
-//         alert('Registration Successful!');
-//         setFormData({
-//           fullName: '',
-//           age: '',
-//           grade: '',
-//           email: '',
-//           contactNumber: '',
-//           city: '',
-//           parentName: '',
-//         });
-//       } else {
-//         const data = await response.json();
-//         alert(data.message || 'Something went wrong. Please try again.');
-//       }
-//     } catch (error) {
-//       alert(`Server error. Please try again later. ${error}`);
-//     }
-
-//     setIsSubmitting(false); // Stop spinner
-//   };
-
-//   return (
-//     <section className="bg-black text-white py-20 px-6 md:px-12 lg:px-20" id="register">
-//       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-//         {/* Left Info */}
-//         <div className="space-y-6">
-//           <h2 className="text-4xl font-bold text-white mb-4">Student Registration</h2>
-//           <p className="text-zinc-400 text-sm">
-//             Register now for the Robotics Class! Open to students from Class 1 to 10. Fill in the details and get started.
-//             <br />
-//             <span className="text-orange-500 font-semibold">Limited seats available!</span>
-//             <br />
-//             <span className="text-orange-500 font-semibold">Hurry up!</span>
-//             <br />
-//             <span className="text-orange-500 font-semibold">Join us in shaping the future!</span>
-//             <br />
-//             <span className="text-orange-500 font-semibold">Unleash your potential!</span>
-//             <br />
-//             <span className="text-orange-500 font-semibold">Think Beyond!</span>
-//             <br />
-//             <span className="text-orange-500 font-semibold">Be a part of the revolution!</span>
-//             <br />
-//             <span className="text-orange-500 font-semibold">Transform your ideas into reality!</span>
-//             <br />
-//             <span className="text-orange-500 font-semibold">Explore the world of robotics!</span>
-//           </p>
-
-//           <div className="w-full h-96">
-//             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-zinc-700">
-//               <video
-//                 src="/IEU Founder Intro Video.mp4"
-//                 width="100%"
-//                 height="300"
-//                 style={{ border: 0 }}
-//                 className="bg-gray-200 "
-//                 autoPlay
-//                 loop
-//                 // muted
-//               controls
-//               />
-
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Right Form */}
-//         <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900 p-8 rounded-2xl shadow-lg border border-zinc-700">
-//           {/* Input Fields */}
-//           {[
-//             { label: "Parent's Name", type: "text", name: "parentName", placeholder: "Enter your parent's name" },
-//             { label: "Full Name", type: "text", name: "fullName", placeholder: "Enter your full name" },
-//             { label: "Age", type: "number", name: "age", placeholder: "Age", min: 5, max: 18 },
-//             { label: "Email Address", type: "email", name: "email", placeholder: "you@example.com" },
-//             { label: "Contact Number", type: "tel", name: "contactNumber", placeholder: "10-digit mobile number", pattern: "[0-9]{10}" },
-//             { label: "City", type: "text", name: "city", placeholder: "Enter your city" },
-//           ].map((input, i) => (
-//             <div key={i}>
-//               {/* <label className="block text-sm text-zinc-300 mb-1">{input.label}</label> */}
-//               <input
-//                 {...input}
-//                 value={formData[input.name as keyof typeof formData]}
-//                 onChange={handleChange}
-//                 className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
-//                 required
-//               />
-//             </div>
-//           ))}
-
-//           <div>
-//             <label className="block text-sm text-zinc-300 mb-1">Class</label>
-//             <select
-//               name="grade"
-//               value={formData.grade}
-//               onChange={handleChange}
-//               className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
-//               required
-//             >
-//               <option value="">Select Class</option>
-//               {[...Array(10)].map((_, i) => (
-//                 <option key={i + 1} value={`Class ${i + 1}`}>{`Class ${i + 1}`}</option>
-//               ))}
-//             </select>
-//           </div>
-
-//           {/* Submit Button */}
-//           <button
-//             type="submit"
-//             disabled={isSubmitting}
-//             className={`w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-cyan-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 ${isSubmitting ? 'cursor-not-allowed opacity-70' : ''
-//               }`}
-//           >
-//             {isSubmitting ? (
-//               <>
-//                 <FaSpinner className="animate-spin" />
-//                 Registering...
-//               </>
-//             ) : (
-//               'Register Now'
-//             )}
-//           </button>
-//         </form>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Register;
-
-
-
-
-
-
-
-
-
 'use client';
 
 import React, { useState, useRef } from 'react';
@@ -288,7 +86,7 @@ const Register = () => {
             <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-amber-500">
               Student Registration
             </h2>
-            <p className="text-zinc-300 text-lg">
+            <p className="text-zinc-300 text-sm">
               Join our Robotics Program and unlock your creative potential. Open to students from Class 1 to 10.
             </p>
             {/* <div className="space-y-2">
@@ -312,10 +110,10 @@ const Register = () => {
           <div className="relative rounded-xl overflow-hidden shadow-2xl border border-zinc-700/50 group">
             <video
               ref={videoRef}
-              src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745768281/IEU_Founder_Intro_Video_2_sfokd7.mp4"
+              src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745848494/Robotic_Arm_Potrait_Video_voxsnc.mp4"
               width="100%"
               height="auto"
-               className="w-full h-auto max-h-[500px] object-cover"
+               className="w-full h-auto max-h-[1200px] object-cover"
               autoPlay
               loop
               muted={isMuted}
@@ -337,7 +135,7 @@ const Register = () => {
         </div>
 
         {/* Right Form */}
-        <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-zinc-700/50">
+        <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-zinc-700/50 mt-8">
           <h3 className="text-2xl font-semibold text-white mb-2">Fill the details</h3>
           <p className="text-zinc-400 text-sm mb-6">Please provide accurate information for registration</p>
 

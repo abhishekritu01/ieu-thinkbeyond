@@ -123,7 +123,7 @@ const sections = [
   },
   {
     title: 'UNDERSTANDING “WHAT”, “HOW” & “WHY”',
-    image: '/2.png',
+    image: '/3.png',
     icon: <FaBookOpen className="text-4xl text-blue-500" />,
     imageAlt: 'Understanding Concepts',
     content:
@@ -131,7 +131,7 @@ const sections = [
   },
   {
     title: 'REDEFINING LEARNING',
-    image: '/3.png',
+    image: '/2.png',
     icon: <FaRocket className="text-4xl text-red-500" />,
     imageAlt: 'Future Learning',
     content:
@@ -146,7 +146,7 @@ const HandsOnSchoolHeader = () => {
       <div className="text-center mb-12 max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white">HANDS ON SCHOOL</h2>
         <p className="mt-4 text-lg text-gray-300">
-          At IEU, we do more than just teaching.
+          At IEU we do more than just teaching.
           <br />
           We inspire the next generation of innovators, creators, and leaders.
         </p>

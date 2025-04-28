@@ -9,6 +9,13 @@ import { courseImages } from '../data/courseImage';
 export default function FullscreenCarousel() {
   return (
     <div className="w-full h-auto py-10 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 bg-gradient-to-br from-gray-900 via-black to-gray-800">
+      <div className="text-center mb-8 md:mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Curriculum</h2>
+        <p className="text-lg md:text-xl text-gray-300">
+          A Future-ready challenge-based curriculum that combines projects, case studies and real-time applications <br />
+          that promates innovation and empowers students by offering necessary skills.
+        </p>
+      </div>
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{
