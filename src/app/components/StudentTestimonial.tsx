@@ -177,7 +177,7 @@ const StudentTestimonial = () => {
           {/* Testimonial Carousel */}
           <div className="relative min-h-[250px]">
             {testimonials.map((testimonial, index) => (
-              <div 
+              <div
                 key={index}
                 className={`absolute inset-0 transition-opacity duration-500 ${index === activeTestimonial ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
               >
@@ -219,7 +219,7 @@ const StudentTestimonial = () => {
               href="#register"
               className="inline-flex items-center gap-3 px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 text-white hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 font-medium text-lg"
             >
-              <FaUserPlus size={20} /> Apply Now
+              <FaUserPlus size={20} /> Register Now
             </a>
           </div>
         </div>
@@ -234,13 +234,13 @@ const StudentTestimonial = () => {
             playsInline
             width="100%"
             height="auto"
-             className="w-full h-auto max-h-[800px] object-cover"
+            className="w-full h-auto max-h-[800px] object-cover"
           >
             {/* <source src="/Student Testimonial IEU Landing Page.mp4" type="video/mp4" /> */}
             <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745768557/Student_Testimonial_IEU_Landing_Page_dncvxd.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          
+
           {/* Mute/Unmute Button */}
           <button
             onClick={toggleMute}

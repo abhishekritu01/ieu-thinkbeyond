@@ -48,7 +48,7 @@ export default function FullscreenCarousel() {
               <img
                 src={course.image}
                 alt={`Course ${course.id}`}
-                className="w-full h-full object-contain rounded-lg"
+                className="w-full h-full object-contain rounded-lg scale-80"
                 loading="lazy"
               />
             </div>

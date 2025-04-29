@@ -9,9 +9,13 @@ const Footer = () => {
         {/* Logo + Intro */}
         <div>
           <h2 className="text-white text-2xl font-bold mb-3">Innovation Uni</h2>
-          <p className="text-sm leading-relaxed">
+          {/* <p className="text-sm leading-relaxed">
             Empowering the next generation of innovators through technology, mentorship and entrepreneurship.
+          </p> */}
+          <p className="text-xs leading-relaxed mb-4 mr-4">
+            OUR LEGACY ! The Future Education is Here ...
           </p>
+
         </div>
 
         {/* Navigation */}

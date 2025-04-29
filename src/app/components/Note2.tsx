@@ -46,9 +46,9 @@ const Note2 = () => {
           <p className='mt-8'>
             <a
               href="#register"
-              className="flex items-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300 w-36"
+              className="flex items-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300 w-44"
             >
-              <FaUserPlus /> Register
+              <FaUserPlus /> Register Now
             </a>
           </p>
         </div>
