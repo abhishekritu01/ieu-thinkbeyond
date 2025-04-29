@@ -12,7 +12,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <main className="pt-28"> {/* Tailwind: pt-20 = 5rem = 80px */}
+      <main className="pt-12"> {/* Tailwind: pt-20 = 5rem = 80px */}
         {/* <Note /> */}
         <HeroSection />
         <Note2 />

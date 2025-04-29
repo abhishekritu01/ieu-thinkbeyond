@@ -178,7 +178,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative flex flex-col lg:flex-row min-h-screen text-white">
+    <section className="relative flex flex-col lg:flex-row  text-white">
       {/* Text Section */}
       <div className="w-full lg:w-1/2 h-screen flex items-center justify-center px-6 lg:px-12 bg-black">
         <div className={`transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} space-y-6 lg:space-y-8 max-w-xl`}>

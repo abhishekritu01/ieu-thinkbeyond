@@ -8,7 +8,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-black/30 backdrop-blur-lg border-b border-orange-400/30 px-6 py-5 shadow-2xl z-50 fixed top-0 left-0 w-full transition-all duration-300">
+    <nav className="bg-black/30 backdrop-blur-lg border-b border-orange-400/30 px-6 py-.5 shadow-2xl z-50 fixed top-0 left-0 w-full transition-all duration-300">
       <div className="flex items-center justify-between">
         {/* Logo / Brand */}
         <Image
