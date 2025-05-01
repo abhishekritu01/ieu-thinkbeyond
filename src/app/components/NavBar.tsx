@@ -12,11 +12,11 @@ const NavBar = () => {
       <div className="flex items-center justify-between">
         {/* Logo / Brand */}
         <Image
-          src="/IEU.png"
+          src="/logo1.jpeg"
           alt="Logo"
           width={100}
-          height={40}
-          className="h-12 w-auto sm:h-16 animate-glow bg-zinc-900 invert-100"
+          height={20}
+          className="h-12 w-auto sm:h-16 animate-glow bg-zinc-950 invert-100"
         />
 
         {/* Hamburger icon for mobile */}

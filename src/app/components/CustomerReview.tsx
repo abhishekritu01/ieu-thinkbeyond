@@ -1,56 +1,59 @@
 'use client';
-
 import { FaStar } from 'react-icons/fa';
 import { FaUserPlus } from 'react-icons/fa';
 
 const reviews = [
   {
-    name: 'Priya Verma',
-    role: 'Tech Entrepreneur',
+    name: 'Rekha Menon',
+    role: 'Tech Enthusiast  ',
     avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
     stars: 5,
     review:
-      'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
+      'My son has discovered a side of himself we never saw before. He’s more curious, creative and confident— He looks forward to every session!',
+  },
+
+  {
+    name: 'Venkata Krishna Rao',
+    role: 'Software Engineer',
+    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+    stars: 5,
+    review:
+      'Honestly, I wasn’t sure what to expect at first. But the way my daughter talks about coding and AI now, I can see she’s learning things that truly matter.',
+  },
+
+  {
+    name: 'Anita Shah',
+    role: 'Startup Mentor',
+    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+    stars: 5,
+    review:
+      'The robotics and 3D printing classes are my son’s favorite part of the week. He now spends his time building instead of just watching videos—huge win!',
   },
   {
-    name: 'Ankit Raj',
-    role: 'Startup Mentor',
-    avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
-    stars: 4,
+    name: 'Karthik Shetty',
+    role: 'Parent of Grade 4 Student',
+    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+    stars: 5,
+    review:
+      'We’re not from a tech background but the team here is so supportive. They’ve made innovation fun and accessible for my child.',
+  }
+  ,
+  {
+    name: 'Neeta Sinha',
+    role: 'Parent of Grade 9 Student',
+    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+    stars: 5,
+    review:
+      'The entrepreneurial module helped my son pitch an actual business idea! He even built a logo and website—I’m amazed at what he’s picked up.',
+  },
+
+  {
+    name: 'Arvind Reddy',
+    role: 'Parent of Grade 6 Student',
+    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+    stars: 5,
     review:
       'Amazing instructors and real-world focus. Perfect platform for young innovators to thrive!',
-  },
-  {
-    name: 'Neha Khurana',
-    role: 'Parent of 12 y/o',
-    avatar: 'https://randomuser.me/api/portraits/women/65.jpg',
-    stars: 5,
-    review:
-      'My daughter absolutely loves the hands-on sessions and mentorship. She’s more curious than ever!',
-  },
-  {
-    name: 'Ravi Kumar',
-    role: 'Tech Enthusiast',
-    avatar: 'https://randomuser.me/api/portraits/women/69.jpg',
-    stars: 4,
-    review:
-      'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
-  },
-  {
-    name: 'Sita Devi',
-    role: 'Parent of 10 y/o',
-    avatar: 'https://randomuser.me/api/portraits/women/62.jpg',
-    stars: 5,
-    review:
-      'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
-  },
-  {
-    name: 'Rahul Sharma',
-    role: 'Tech Entrepreneur',
-    avatar: 'https://randomuser.me/api/portraits/women/61.jpg',
-    stars: 5,
-    review:
-      'The curriculum is forward-thinking and practical. I’ve seen real growth in my son’s confidence and technical skills.',
   },
 ];
 

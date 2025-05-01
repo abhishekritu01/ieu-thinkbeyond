@@ -119,10 +119,7 @@
 
 // export default HeroSection;
 
-
-
-
-'use client'
+'use client';
 
 import React, { useRef, useEffect, useState } from 'react';
 import { FaUserPlus, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
@@ -178,7 +175,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative flex flex-col lg:flex-row  text-white">
+    <section className="relative flex flex-col lg:flex-row text-white">
       {/* Text Section */}
       <div className="w-full lg:w-1/2 h-screen flex items-center justify-center px-6 lg:px-12 bg-black">
         <div className={`transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} space-y-6 lg:space-y-8 max-w-xl`}>
@@ -208,28 +205,26 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
       {/* Video Section */}
-      <div className="w-full lg:w-1/2 h-screen relative  bg-black">
+      <div className="w-full lg:w-1/2 h-screen relative bg-black">
         <video
           ref={videoRef}
           autoPlay
           loop
           muted={isMuted}
-          className={`w-full h-full object-cover transition-opacity duration-500 px-2 scale-90 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-auto h-auto object-cover transition-opacity duration-500 -mt-16 scale-80 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
           playsInline
           controls={autoplayFailed}
           preload="auto"
         >
-          <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745768281/IEU_Founder_Intro_Video_2_sfokd7.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746078541/IEU_Intro_Founder_ewywnc.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
 
         {/* Mute Button */}
         <button
           onClick={handleMuteToggle}
-          className="absolute top-12 right-12 z-20 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm"
+          className="absolute top-4 -mt-8 md:-mt-4 md:top-12 right-12 md:right-20 z-20 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm"
           aria-label={isMuted ? 'Unmute video' : 'Mute video'}
         >
           {isMuted ? (

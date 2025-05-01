@@ -301,7 +301,7 @@ const Register = () => {
               Student Registration
             </h2>
             <p className="text-zinc-300 text-sm">
-              Join our Robotics Program and unlock your creative potential. Open to students from Class 1 to 10.
+              Join our School and unlock your creative potential. Open to students from Class 1 to 12.
             </p>
             {/* <div className="space-y-2">
               {[
@@ -383,7 +383,7 @@ const Register = () => {
               required
             >
               <option value="">Select Class</option>
-              {[...Array(10)].map((_, i) => (
+              {[...Array(12)].map((_, i) => (
                 <option key={i + 1} value={`Class ${i + 1}`}>{`Class ${i + 1}`}</option>
               ))}
             </select>
