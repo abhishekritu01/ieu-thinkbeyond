@@ -1,98 +1,142 @@
 import React from 'react';
-import { FaWhatsapp, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import {
+  FaWhatsapp,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaInstagram,
+} from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
 import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8 px-6 md:px-8 lg:px-12">
-      <div className="max-w-7xl mx-auto">
-        {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-12">
-          {/* Brand Column */}
-          <div className="md:col-span-6 lg:col-span-5">
-            <div className="flex items-center mb-4">
-              <Image
-                src="/logo1.jpeg"
-                alt="Innovation Uni Logo"
-                width={160}
-                height={80}
-                className="h-12 w-auto object-contain"
-                priority
-              />
-              <h2 className="ml-3 text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Innovation Uni
-              </h2>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              OUR LEGACY! The Future Education is Here. Shaping the future of education through innovation and entrepreneurship.
-            </p>
-            <div className="flex space-x-4">
-              <a 
-                href="https://wa.me/+918951258207?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs!%0A" 
-                className="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full transition-colors flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <FaWhatsapp className="text-xl mr-2" />
-                <span className="text-sm">Chat with Us</span>
-              </a>
-            </div>
-          </div>
+    <>
+      <div className="relative w-full h-28 md:h-64 overflow-hidden -mt-24 md:mt-0 px-4 md:px-0 flex items-center justify-center">
+        <a
+          href="https://wa.me/+918951258207"
+          rel="noopener noreferrer"
+          aria-label="Chat with us on WhatsApp"
+          className="absolute right-[10%] bottom-[30%] z-30 flex items-center gap-2 px-4 py-2 text-sm md:text-base font-medium bg-green-500 text-white rounded-full shadow hover:bg-green-600 transition-all group"
+        >
+          <FaWhatsapp className="text-base md:text-lg h-24 w-24 group-hover:scale-110 transition-transform" />
+          {/* <span>Chat on WhatsApp</span> */}
+        </a>
 
-          {/* Contact Info - Expanded */}
-          <div className="md:col-span-6 lg:col-span-7">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-white font-semibold text-lg mb-4 pb-2 border-b border-gray-700">Our Location</h4>
-                <div className="flex items-start">
-                  <FaMapMarkerAlt className="mt-1 mr-3 text-blue-400 flex-shrink-0" />
-                  <address className="not-italic text-sm">
-                    1A, KRS Rd, next to Mandovi Motors,<br />
-                    Devaraja Mohalla, CFTRI Campus,<br />
-                    Yadavagiri, Mysuru,<br />
+        <img
+          src="/banner.png"
+          alt="Footer Background"
+          className="absolute inset-0 w-full h-full object-cover md:object-scale-down pointer-events-none z-10"
+        />
+      </div>
+
+
+
+
+      <footer className="bg-black text-gray-300 py-12 px-4 sm:px-6 border-t border-gray-700 transition-all duration-300 ease-in-out">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Column 1 - Legacy and Logo */}
+            <div className="flex flex-col items-center md:items-start text-center md:text-left transition-all duration-300">
+              <h4 className="text-white font-semibold text-lg mb-2">OUR LEGACY!</h4>
+              <p className="text-gray-400 text-base mb-6">
+                The future education is here
+              </p>
+              <div className="w-full flex justify-center md:justify-start">
+                <Image
+                  src="/iuefinal1.png"
+                  alt="IEU Logo"
+                  width={200}
+                  height={60}
+                  priority
+                  className="object-contain w-full max-w-[200px] transition-transform duration-300 hover:scale-105 md:-mt-16"
+                />
+              </div>
+            </div>
+
+            {/* Column 2 - Contact Details and Address */}
+            <div className="transition-all duration-300 text-center md:text-left">
+              <h4 className="text-white font-semibold text-lg mb-4">
+                Contact Us
+              </h4>
+              <ul className="space-y-4 text-sm">
+                <li className="flex flex-col sm:flex-row sm:items-start justify-center md:justify-start text-center sm:text-left">
+                  <FaPhoneAlt className="mb-1 sm:mt-1 sm:mr-3 text-blue-400 text-lg" />
+                  <div>
+                    <a
+                      href="tel:+918951258207"
+                      className="hover:text-blue-400 transition-colors block"
+                    >
+                      +91 89512 58207
+                    </a>
+                    <a
+                      href="tel:+919686593948"
+                      className="hover:text-blue-400 transition-colors block"
+                    >
+                      +91 96865 93948
+                    </a>
+                  </div>
+                </li>
+                {/* <li className="flex flex-col sm:flex-row items-center sm:items-start justify-center md:justify-start text-center sm:text-left">
+                  <FaEnvelope className="mb-1 sm:mr-3 text-red-400 text-lg" />
+                  <a
+                    href="mailto:hello@innovationuni.com"
+                    className="hover:text-red-400 transition-colors"
+                  >
+                    hello@innovationuni.com
+                  </a>
+                </li> */}
+                {/* <li className="flex items-center justify-center md:justify-start">
+                  <FiClock className="mr-3 text-green-400 text-lg" />
+                  <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
+                </li> */}
+                <li className="flex flex-col sm:flex-row justify-center md:justify-start text-center sm:text-left">
+                  <FaMapMarkerAlt className="mb-1 sm:mt-1 sm:mr-3 text-orange-400 text-lg" />
+                  <address className="not-italic leading-relaxed">
+                    1A, KRS Rd, next to Mandovi Motors,
+                    <br />
+                    Devaraja Mohalla, CFTRI Campus,
+                    <br />
+                    Yadavagiri, Mysuru,
+                    <br />
                     Karnataka 570005
                   </address>
-                </div>
-              </div>
+                </li>
+              </ul>
+            </div>
 
-              <div>
-                <h4 className="text-white font-semibold text-lg mb-4 pb-2 border-b border-gray-700">Contact Details</h4>
-                <ul className="space-y-4 text-sm">
-                  <li className="flex items-center">
-                    <FaPhoneAlt className="mr-3 text-blue-400" />
-                    <div>
-                      <a href="tel:+918951258207" className="hover:text-blue-400 transition-colors block">+91 89512 58207</a>
-                      <a href="tel:+919686593948" className="hover:text-blue-400 transition-colors block">+91 96865 93948</a>
-                    </div>
-                  </li>
-                  <li className="flex items-center">
-                    <FaEnvelope className="mr-3 text-blue-400" />
-                    <a href="mailto:hello@innovationuni.com" className="hover:text-blue-400 transition-colors">
-                      hello@innovationuni.com
-                    </a>
-                  </li>
-                  <li className="flex items-center">
-                    <FiClock className="mr-3 text-blue-400" />
-                    <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
-                  </li>
-                </ul>
+            {/* Column 3 - Social Media Links */}
+            <div className="flex flex-col items-center md:items-end transition-all duration-300 text-center md:text-right">
+              <h4 className="text-white font-semibold text-lg mb-4">
+                Connect with Us
+              </h4>
+              <div className="flex flex-col space-y-4 w-full max-w-[250px]">
+                <a
+                  href="https://wa.me/+918951258207"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat with us on WhatsApp"
+                  className="flex items-center justify-center md:justify-end text-green-400 hover:text-green-300 transition-colors group"
+                >
+                  <FaWhatsapp className="mr-2 text-lg group-hover:scale-110 transition-transform" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/i.e.u_edu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Instagram"
+                  className="flex items-center justify-center md:justify-end text-pink-400 hover:text-pink-300 transition-colors group"
+                >
+                  <FaInstagram className="mr-2 text-lg group-hover:scale-110 transition-transform" />
+                  <span>Follow on Instagram</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Bottom Section */}
-        <div className="pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-xs text-gray-500 mb-4 md:mb-0">
-            © {new Date().getFullYear()} Innovation & Entrepreneurship UNI. All rights reserved.
-          </div>
-          <div className="flex space-x-6 text-xs">
-            <a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 

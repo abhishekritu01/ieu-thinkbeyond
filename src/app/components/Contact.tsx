@@ -292,7 +292,7 @@ const Register = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-900 to-black text-white py-20 px-6 md:px-12 lg:px-20" id="register">
+    <section className="text-white py-20 px-6 md:px-12 lg:px-20" id="register">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {/* Left Info */}
         <div className="space-y-8">
@@ -301,7 +301,7 @@ const Register = () => {
               Student Registration
             </h2>
             <p className="text-zinc-300 text-sm">
-              Join our School and unlock your creative potential. Open to students from Class 1 to 12.
+              Join our School and unlock your creative potential.<br />Open to students from Class 1 to 12.
             </p>
             {/* <div className="space-y-2">
               {[
@@ -327,7 +327,7 @@ const Register = () => {
               src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745848494/Robotic_Arm_Potrait_Video_voxsnc.mp4"
               width="100%"
               height="auto"
-               className="w-full h-auto max-h-[1200px] object-cover"
+              className="w-full h-auto max-h-[1200px] object-cover"
               autoPlay
               loop
               muted={true}
@@ -350,8 +350,8 @@ const Register = () => {
 
         {/* Right Form */}
         <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-zinc-700/50 mt-8">
-          <h3 className="text-2xl font-semibold text-white mb-2">Fill the details</h3>
-          <p className="text-zinc-400 text-sm mb-6">Please provide accurate information for registration</p>
+          <h3 className="text-xl font-semibold text-white mb-2">Fill the details</h3>
+          {/* <p className="text-zinc-400 text-sm mb-6">Please provide accurate information for registration</p> */}
 
           {[
             { label: "Parent's Name", type: "text", name: "parentName", placeholder: "Enter parent's full name" },
@@ -388,15 +388,32 @@ const Register = () => {
               ))}
             </select>
           </div>
+          {/* 1.World's first fully hands-on School ( integrated schooling at our campus)
+2.6 months Innovation program (weekends)
+3.Summer camp */}
+          <div className="space-y-1">
+            <label className="text-sm text-zinc-300">Are u interested in?</label>
+            <select
+              name="grade"
+              value={formData.grade}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white"
+              required
+            >
+              <option value="">Select Class</option>
+              {[...Array(12)].map((_, i) => (
+                <option key={i + 1} value={`Class ${i + 1}`}>{`Class ${i + 1}`}</option>
+              ))}
+            </select>
+          </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-              isSubmitting
+            className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium transition-all duration-300 ${isSubmitting
                 ? 'bg-amber-600 cursor-not-allowed'
                 : 'bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 shadow-lg hover:shadow-amber-500/30'
-            }`}
+              }`}
           >
             {isSubmitting ? (
               <>

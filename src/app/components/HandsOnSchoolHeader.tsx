@@ -257,14 +257,14 @@ const sections = [
 
 const HandsOnSchoolHeader = () => {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 p-6 flex flex-col items-center">
+    <div className="w-full min-h-screen p-6 flex flex-col items-center">
       {/* Heading */}
       <div className="text-center mb-12 max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white">HANDS ON SCHOOL</h2>
         <p className="mt-4 text-lg text-gray-300">
           At IEU we do more than just teaching.
           <br />
-          We inspire the next generation of innovators, creators, and leaders.
+          We inspire the next generation of innovators, creators and leaders.
         </p>
       </div>
 
@@ -302,7 +302,7 @@ const HandsOnSchoolHeader = () => {
       {/* Footer Text */}
       <div className="text-center mt-12">
         <p className="text-lg text-gray-300">
-          Whether in tech, science, or business, we equip students to turn their
+          Whether in tech, science or business, we equip students to turn their
           <br />
           innovative ideas into impactful businesses.
         </p>

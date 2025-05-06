@@ -15,7 +15,7 @@ const Page = () => {
       <NavBar />
       <main className="pt-12"> {/* Tailwind: pt-20 = 5rem = 80px */}
         <HeroSection />
-        <Note />
+        {/* <Note /> */}
         <Note2 />
         <HandsOnSchoolHeader />
         <StudentTestimonial />
