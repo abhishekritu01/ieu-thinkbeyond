@@ -10,26 +10,26 @@ const StudentTestimonial = () => {
 
   const testimonials = [
     {
-      quote: "The faculty at this university transformed my career. Coming from a small town, I never imagined I'd work at a top tech company, but the placement cell made it happen.",
-      name: "Priya Sharma",
-      role: "Software Engineer @ Microsoft | Batch of 2021",
-      avatar: "PS",
-      bgColor: "bg-purple-600"
+      name: 'Pradyumna Gururaj',
+      role: 'Founder, Software IT Consultancy',
+      quote: 'After the program, I was able to build my skills in tech and branding to build my own Software IT Consultancy offering solutions now worldwide. All thanks to IEU.',
+      avatar: 'PG',
+      bgColor: 'bg-blue-500',
     },
     {
-      quote: "As a first-generation college student, I was nervous about campus life. But the supportive environment and industry-relevant curriculum helped me secure three job offers!",
-      name: "Rahul Patel",
-      role: "Data Scientist @ Amazon | Batch of 2020",
-      avatar: "RP",
-      bgColor: "bg-blue-600"
+      name: 'Vansh',
+      role: 'Young Coder & Inventor',
+      quote: 'I’m Vansh, 4th grade student at IEU, I am an inventor, a young coder who has built over 100+ projects. I am on a pursuit to build my own electric vehicle that is drivable. My skillset includes Embedded coding, Electronics, 3-D Printing, Robotics and Mechatronics.',
+      avatar: 'V',
+      bgColor: 'bg-green-500',
     },
     {
-      quote: "The startup incubation center gave wings to my entrepreneurial dreams. My ed-tech platform now has over 50,000 users, all thanks to the mentorship I received here.",
-      name: "Ananya Gupta",
-      role: "Founder @ EduNext | Batch of 2022",
-      avatar: "AG",
-      bgColor: "bg-pink-600"
-    }
+      name: 'Aarav',
+      role: 'Young Scientist & Inventor',
+      quote: 'I’m Aarav, 5th grade student at IEU. I am an inventor, electronics hobbyist with an aspiration to become a Young Scientist. I have built multiple rovers and robots. My favourite subjects Robotics, Soldering and Electronics and Circuits.',
+      avatar: 'A',
+      bgColor: 'bg-red-500',
+    },
   ];
 
   const toggleMute = () => {
@@ -111,7 +111,7 @@ const StudentTestimonial = () => {
         </div>
 
         {/* Right: Video Section */}
-        <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700 hover:scale-[1.01] transition-transform duration-300">
+        <div className="relative w-auto rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700 hover:scale-[1.01] transition-transform duration-300">
           <video
             ref={videoRef}
             autoPlay

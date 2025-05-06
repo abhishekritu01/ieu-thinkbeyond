@@ -7,15 +7,15 @@ import NavBar from './components/NavBar';
 import Note2 from './components/Note2';
 import OurCurriculum from './components/OurCurriculum';
 import StudentTestimonial from './components/StudentTestimonial';
-// import Note from './components/Note';
+import Note from './components/Note';
 
 const Page = () => {
   return (
     <>
       <NavBar />
       <main className="pt-12"> {/* Tailwind: pt-20 = 5rem = 80px */}
-        {/* <Note /> */}
         <HeroSection />
+        <Note />
         <Note2 />
         <HandsOnSchoolHeader />
         <StudentTestimonial />

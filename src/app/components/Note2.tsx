@@ -44,7 +44,7 @@ const Note2 = () => {
           <div className="flex items-center gap-4 justify-center md:justify-start">
             <FaLightbulb className="text-yellow-400 text-5xl animate-pulse" />
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-            &ldquo; We believe prodigies are not born, but made.&ldquo;
+            We believe prodigies are not born, but made 
             </h1>
           </div>
 
@@ -76,7 +76,7 @@ const Note2 = () => {
         <div className="text-center space-y-3">
           <div className="bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400 px-6 py-4 rounded-xl shadow-lg">
             <p className="text-lg sm:text-xl font-semibold">
-              ⏰ Only <span className="underline font-bold">2 Days Left</span> to register!
+              ⏰ Only <span className="underline font-bold">48 hour </span> to register!
             </p>
           </div>
 
