@@ -18,3 +18,26 @@ export const courseImages = [
     { id: 17, image: '/desktop/17 - Branding.png' },
     { id: 18, image: '/desktop/18 - Sales & Campaign Management.png' },
   ];
+
+
+
+
+  export const courseImagesMobile = [
+    { id: 1, image: '/mobile/1 - Robotics.png' },
+    { id: 2, image: '/mobile/2 - Coding.png' },
+    { id: 3, image: '/mobile/3 - AI.png' },
+    { id: 4, image: '/mobile/4 - Computer Engineering.png' },
+    { id: 5, image: '/mobile/5 - IOT.png' },
+    { id: 6, image: '/mobile/6 - Electronics.png' },
+    { id: 7, image: '/mobile/7 - Mechatronics.png' },
+    { id: 9, image: '/mobile/8 - Signal Processing.png' },
+    { id: 10, image: '/mobile/9 - 3D Printing.png' },
+    { id: 11, image: '/mobile/10 - Startup Ecosystem.png' },
+    { id: 12, image: '/mobile/12 - Digital Commerce.png' },
+    { id: 13, image: '/mobile/13 - Entrepreneurship.png' },
+    { id: 14, image: '/mobile/14 - Design Thinking.png' },
+    { id: 15, image: '/mobile/15 - Content Writing.png' },
+    { id: 16, image: '/mobile/16 - Financial literacy.png' },
+    { id: 17, image: '/mobile/17 - Branding.png' },
+    { id: 18, image: '/mobile/18 - Sales & Campaign Management.png' },
+  ];

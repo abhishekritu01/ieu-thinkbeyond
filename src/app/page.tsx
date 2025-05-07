@@ -7,7 +7,6 @@ import NavBar from './components/NavBar';
 import Note2 from './components/Note2';
 import OurCurriculum from './components/OurCurriculum';
 import StudentTestimonial from './components/StudentTestimonial';
-import Note from './components/Note';
 
 const Page = () => {
   return (

@@ -62,7 +62,7 @@ const StudentTestimonial = () => {
           </p> */}
 
           {/* Carousel */}
-          <div className="relative min-h-[250px]">
+          <div className="relative min-h-[400px] md:min-h-[250px]">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -100,7 +100,7 @@ const StudentTestimonial = () => {
           </div>
 
           {/* Register CTA */}
-          <div className="mt-8">
+          <div className="mt-8 flex justify-center md:justify-start">
             <a
               href="#register"
               className="inline-flex items-center gap-3 px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 text-white hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 font-medium text-lg"
@@ -108,6 +108,7 @@ const StudentTestimonial = () => {
               <FaUserPlus size={20} /> Register Now
             </a>
           </div>
+
         </div>
 
         {/* Right: Video Section */}

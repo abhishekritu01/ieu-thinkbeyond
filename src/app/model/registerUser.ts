@@ -41,6 +41,15 @@ const studentSchema = new mongoose.Schema({
     required: true,
     match: /^[0-9]{10}$/, // Validates 10-digit numbers
   },
+  interestedIn: {
+    type: [String],
+    required: true,
+    enum: [
+      "World's first fully hands-on School (integrated schooling at our campus)",
+      "6 months Innovation program (weekends)",
+      "Summer camp"
+    ]
+  }
 }, {
   timestamps: true
 });

@@ -2,7 +2,7 @@
 
 // import React, { useRef, useState } from 'react';
 // import { FaSpinner } from 'react-icons/fa';
-// import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
+
 
 // interface FormData {
 //   fullName: string;
@@ -14,6 +14,10 @@
 //   parentName: string;
 // }
 
+// // 1.World's first fully hands-on School ( integrated schooling at our campus)
+// // 2.6 months Innovation program (weekends)
+// // 3.Summer camp
+
 // const Register = () => {
 //   const [formData, setFormData] = useState<FormData>({
 //     fullName: '',
@@ -23,10 +27,11 @@
 //     email: '',
 //     contactNumber: '',
 //     city: '',
+
 //   });
 
 //   const [isSubmitting, setIsSubmitting] = useState(false);
-//   const [isMuted, setIsMuted] = useState(true);
+//   // const [isMuted, setIsMuted] = useState(true);
 //   const videoRef = useRef<HTMLVideoElement>(null);
 
 //   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -37,12 +42,12 @@
 //     }));
 //   };
 
-//   const toggleMute = () => {
-//     if (videoRef.current) {
-//       videoRef.current.muted = !isMuted;
-//       setIsMuted(!isMuted);
-//     }
-//   };
+//   // const toggleMute = () => {
+//   //   if (videoRef.current) {
+//   //     videoRef.current.muted = !isMuted;
+//   //     setIsMuted(!isMuted);
+//   //   }
+//   // };
 
 //   const handleSubmit = async (e: React.FormEvent) => {
 //     e.preventDefault();
@@ -79,7 +84,7 @@
 //   };
 
 //   return (
-//     <section className="bg-gradient-to-b from-gray-900 to-black text-white py-20 px-6 md:px-12 lg:px-20" id="register">
+//     <section className="text-white py-20 px-6 md:px-12 lg:px-20" id="register">
 //       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 //         {/* Left Info */}
 //         <div className="space-y-8">
@@ -88,7 +93,7 @@
 //               Student Registration
 //             </h2>
 //             <p className="text-zinc-300 text-sm">
-//               Join our Robotics Program and unlock your creative potential. Open to students from Class 1 to 10.
+//               Join our School and unlock your creative potential.<br />Open to students from Class 1 to 12.
 //             </p>
 //             {/* <div className="space-y-2">
 //               {[
@@ -114,14 +119,14 @@
 //               src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745848494/Robotic_Arm_Potrait_Video_voxsnc.mp4"
 //               width="100%"
 //               height="auto"
-//                className="w-full h-auto max-h-[1200px] object-cover"
+//               className="w-full h-auto max-h-[1200px] object-cover"
 //               autoPlay
 //               loop
-//               muted={isMuted}
+//               muted={true}
 //               playsInline
 //             />
 //             {/* Mute/Unmute Button */}
-//             <button
+//             {/* <button
 //               onClick={toggleMute}
 //               className="absolute bottom-4 right-4 z-10 p-2 bg-black/60 rounded-full hover:bg-black transition-all group-hover:opacity-100"
 //               aria-label={isMuted ? "Unmute video" : "Mute video"}
@@ -131,14 +136,14 @@
 //               ) : (
 //                 <FaVolumeUp className="text-white text-lg" />
 //               )}
-//             </button>
+//             </button> */}
 //           </div>
 //         </div>
 
 //         {/* Right Form */}
 //         <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-zinc-700/50 mt-8">
-//           <h3 className="text-2xl font-semibold text-white mb-2">Fill the details</h3>
-//           <p className="text-zinc-400 text-sm mb-6">Please provide accurate information for registration</p>
+//           <h3 className="text-xl font-semibold text-white mb-2">Fill the details</h3>
+//           {/* <p className="text-zinc-400 text-sm mb-6">Please provide accurate information for registration</p> */}
 
 //           {[
 //             { label: "Parent's Name", type: "text", name: "parentName", placeholder: "Enter parent's full name" },
@@ -170,7 +175,25 @@
 //               required
 //             >
 //               <option value="">Select Class</option>
-//               {[...Array(10)].map((_, i) => (
+//               {[...Array(12)].map((_, i) => (
+//                 <option key={i + 1} value={`Class ${i + 1}`}>{`Class ${i + 1}`}</option>
+//               ))}
+//             </select>
+//           </div>
+//           {/* 1.World's first fully hands-on School ( integrated schooling at our campus)
+// 2.6 months Innovation program (weekends)
+// 3.Summer camp */}
+//           <div className="space-y-1">
+//             <label className="text-sm text-zinc-300">Are u interested in?</label>
+//             <select
+//               name="grade"
+//               value={formData.grade}
+//               onChange={handleChange}
+//               className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white"
+//               required
+//             >
+//               <option value="">Select Class</option>
+//               {[...Array(12)].map((_, i) => (
 //                 <option key={i + 1} value={`Class ${i + 1}`}>{`Class ${i + 1}`}</option>
 //               ))}
 //             </select>
@@ -179,11 +202,10 @@
 //           <button
 //             type="submit"
 //             disabled={isSubmitting}
-//             className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-//               isSubmitting
+//             className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium transition-all duration-300 ${isSubmitting
 //                 ? 'bg-amber-600 cursor-not-allowed'
 //                 : 'bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 shadow-lg hover:shadow-amber-500/30'
-//             }`}
+//               }`}
 //           >
 //             {isSubmitting ? (
 //               <>
@@ -209,15 +231,12 @@
 
 
 
-//========================
-
 'use client';
 
 import React, { useRef, useState } from 'react';
 import { FaSpinner } from 'react-icons/fa';
 
-
-interface FormData {
+type FormData = {
   fullName: string;
   age: string;
   grade: string;
@@ -225,7 +244,14 @@ interface FormData {
   contactNumber: string;
   city: string;
   parentName: string;
-}
+  interestedIn : string[];
+};
+
+const INTEREST_OPTIONS = [
+  "World's first fully hands-on School (integrated schooling at our campus)",
+  "6 months Innovation program (weekends)",
+  "Summer camp"
+];
 
 const Register = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -236,10 +262,10 @@ const Register = () => {
     email: '',
     contactNumber: '',
     city: '',
+    interestedIn : []
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -250,16 +276,28 @@ const Register = () => {
     }));
   };
 
-  // const toggleMute = () => {
-  //   if (videoRef.current) {
-  //     videoRef.current.muted = !isMuted;
-  //     setIsMuted(!isMuted);
-  //   }
-  // };
+  const handleCheckboxChange = (option: string) => {
+    setFormData(prev => {
+      const isChecked = prev.interestedIn .includes(option);
+      const updated = isChecked
+        ? prev.interestedIn .filter(item => item !== option)
+        : [...prev.interestedIn , option];
+      return { ...prev, interestedIn : updated };
+    });
+  };
+
+  const handleSelectAll = (checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      interestedIn : checked ? [...INTEREST_OPTIONS] : [],
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    console.log('Form Data:', formData); // Debugging form data before submission
 
     try {
       const response = await fetch('/api/register', {
@@ -267,6 +305,8 @@ const Register = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
+      console.log('Response Status:', response.status); // Check response status
 
       if (response.ok) {
         alert('Registration Successful!');
@@ -278,9 +318,15 @@ const Register = () => {
           email: '',
           contactNumber: '',
           city: '',
+          interestedIn : []
         });
+      } else if (response.status === 409) {
+        alert('Email already registered. Please use a different email.');
+      } else if (response.status === 400) {
+        alert('All fields are required. Please fill them out.');
       } else {
         const data = await response.json();
+        console.log('Response Data:', data); // Log the response data for better debugging
         alert(data.message || 'Registration failed. Please try again.');
       }
     } catch (error) {
@@ -292,7 +338,7 @@ const Register = () => {
   };
 
   return (
-    <section className="text-white py-20 px-6 md:px-12 lg:px-20" id="register">
+    <section className="text-white py-36 px-6 md:px-12 lg:px-20" id="register">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {/* Left Info */}
         <div className="space-y-8">
@@ -303,21 +349,6 @@ const Register = () => {
             <p className="text-zinc-300 text-sm">
               Join our School and unlock your creative potential.<br />Open to students from Class 1 to 12.
             </p>
-            {/* <div className="space-y-2">
-              {[
-                "Limited seats available!",
-                "Hurry up!",
-                "Join us in shaping the future!",
-                "Unleash your potential!",
-                "Transform ideas into reality!",
-                "Explore the world of robotics!"
-              ].map((text, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <span className="text-amber-500">✦</span>
-                  <span className="text-amber-400 font-medium">{text}</span>
-                </div>
-              ))}
-            </div> */}
           </div>
 
           {/* Video Section */}
@@ -330,30 +361,17 @@ const Register = () => {
               className="w-full h-auto max-h-[1200px] object-cover"
               autoPlay
               loop
-              muted={true}
+              muted
               playsInline
             />
-            {/* Mute/Unmute Button */}
-            {/* <button
-              onClick={toggleMute}
-              className="absolute bottom-4 right-4 z-10 p-2 bg-black/60 rounded-full hover:bg-black transition-all group-hover:opacity-100"
-              aria-label={isMuted ? "Unmute video" : "Mute video"}
-            >
-              {isMuted ? (
-                <FaVolumeMute className="text-white text-lg" />
-              ) : (
-                <FaVolumeUp className="text-white text-lg" />
-              )}
-            </button> */}
           </div>
         </div>
 
         {/* Right Form */}
         <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-zinc-700/50 mt-8">
           <h3 className="text-xl font-semibold text-white mb-2">Fill the details</h3>
-          {/* <p className="text-zinc-400 text-sm mb-6">Please provide accurate information for registration</p> */}
 
-          {[
+          {[ 
             { label: "Parent's Name", type: "text", name: "parentName", placeholder: "Enter parent's full name" },
             { label: "Student's Full Name", type: "text", name: "fullName", placeholder: "Enter student's full name" },
             { label: "Age", type: "number", name: "age", placeholder: "Enter age (5-18)", min: 5, max: 18 },
@@ -367,7 +385,7 @@ const Register = () => {
                 {...input}
                 value={formData[input.name as keyof FormData]}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white placeholder-zinc-500 transition-all"
+                className="w-full px-4 py-1 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white placeholder-zinc-500 transition-all"
                 required
               />
             </div>
@@ -388,32 +406,43 @@ const Register = () => {
               ))}
             </select>
           </div>
-          {/* 1.World's first fully hands-on School ( integrated schooling at our campus)
-2.6 months Innovation program (weekends)
-3.Summer camp */}
-          <div className="space-y-1">
-            <label className="text-sm text-zinc-300">Are u interested in?</label>
-            <select
-              name="grade"
-              value={formData.grade}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white"
-              required
-            >
-              <option value="">Select Class</option>
-              {[...Array(12)].map((_, i) => (
-                <option key={i + 1} value={`Class ${i + 1}`}>{`Class ${i + 1}`}</option>
+
+          {/* Checkboxes with Select All */}
+          <div className="space-y-2">
+            <label className="text-sm text-zinc-300">Are you interested in?</label>
+            <div className="flex flex-col gap-2 text-sm text-white">
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  className="accent-amber-500"
+                  checked={formData.interestedIn .length === INTEREST_OPTIONS.length}
+                  onChange={(e) => handleSelectAll(e.target.checked)}
+                />
+                Select All
+              </label>
+              {INTEREST_OPTIONS.map(option => (
+                <label key={option} className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    value={option}
+                    checked={formData.interestedIn .includes(option)}
+                    onChange={() => handleCheckboxChange(option)}
+                    className="accent-amber-500"
+                  />
+                  {option}
+                </label>
               ))}
-            </select>
+            </div>
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium transition-all duration-300 ${isSubmitting
+            className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
+              isSubmitting
                 ? 'bg-amber-600 cursor-not-allowed'
                 : 'bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 shadow-lg hover:shadow-amber-500/30'
-              }`}
+            }`}
           >
             {isSubmitting ? (
               <>
@@ -431,4 +460,3 @@ const Register = () => {
 };
 
 export default Register;
-

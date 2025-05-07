@@ -180,7 +180,8 @@ const HeroSection = () => {
             <a href="#register" className="flex items-center gap-1 px-4 py-2 rounded-md bg-orange-500 text-white hover:bg-orange-600 text-sm font-medium"><FaUserPlus size={14} /> Register Now</a>
           </div>
         </div> */}
-        <div className={`transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} space-y-3 max-w-xl`}>
+        {/* <div className={`transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} space-y-3 max-w-xl`}> */}
+        <div >
         <Image 
           src="/herodesktop.png"
           alt="Hero Image"
@@ -197,7 +198,7 @@ const HeroSection = () => {
           className={'block md:hidden '}
           priority
         />
-          <div className="flex flex-wrap gap-3 pt-1 ml-4 sm:ml-8 -mt-8 sm:mt-0">
+          <div className="flex flex-wrap gap-3 pt-1 ml-4 sm:ml-10  sm:mt-0">
             <a href="#register" className="flex items-center gap-1 px-4 py-2 rounded-md border border-white text-white hover:bg-zinc-900 text-sm font-medium"><FaUserPlus size={14} /> Register Now</a>
           </div>
         </div>
