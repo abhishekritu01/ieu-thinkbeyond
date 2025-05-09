@@ -164,8 +164,8 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative flex flex-col lg:flex-row text-white mt-8">
-      <div className="w-full lg:w-1/2 h-screen flex items-center justify-center px-6 lg:px-12 bg-black">
+    <section className="relative flex flex-col flex-col-reverse mt-16 lg:flex-row text-white mt-8">
+      <div className="w-full lg:w-1/2 h-screen flex items-center justify-center px-6 lg:px-12 bg-black -mt-32  md:mt-0">
         {/* <div className={`transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} space-y-3 max-w-xl`}>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white font-sans"><span className="text-white">World&apos;s <span className='text-7xl'>1</span>st<br /></span></h1>
           <h1 className="text-4xl sm:text-5xl lg:text-3xl font-bold text-white">FULLY HANDS-ON SCHOOL</h1>
@@ -182,24 +182,24 @@ const HeroSection = () => {
         </div> */}
         {/* <div className={`transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} space-y-3 max-w-xl`}> */}
         <div >
-        <Image 
-          src="/herodesktop.png"
-          alt="Hero Image"
-          width={1000}
-          height={500}
-          className={'hidden md:block '}
-          priority
-        />
-        <Image 
-          src="/heromobile.png"
-          alt="Hero Image"
-          width={1000}
-          height={500}
-          className={'block md:hidden '}
-          priority
-        />
-          <div className="flex flex-wrap gap-3 pt-1 ml-4 sm:ml-10  sm:mt-0">
-            <a href="#register" className="flex items-center gap-1 px-4 py-2 rounded-md border border-white text-white hover:bg-zinc-900 text-sm font-medium"><FaUserPlus size={14} /> Register Now</a>
+          <Image
+            src="/herodesktop.png"
+            alt="Hero Image"
+            width={1000}
+            height={500}
+            className={'hidden md:block '}
+            priority
+          />
+          <Image
+            src="/heromobile.png"
+            alt="Hero Image"
+            width={1000}
+            height={500}
+            className={'block md:hidden '}
+            priority
+          />
+          <div className="flex flex-wrap gap-3 pt-1 ml-8 sm:ml-10  sm:mt-0">
+            <a href="#register" className="flex items-center gap-1 px-4 py-2 rounded-md  border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300 w-44"><FaUserPlus size={14} /> Register Now</a>
           </div>
         </div>
 

@@ -338,7 +338,7 @@ const Register = () => {
   };
 
   return (
-    <section className="text-white py-36 px-6 md:px-12 lg:px-20" id="register">
+    <section className="text-white md:py-12 px-6 md:px-12" id="register">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {/* Left Info */}
         <div className="space-y-8">
@@ -352,7 +352,7 @@ const Register = () => {
           </div>
 
           {/* Video Section */}
-          <div className="relative rounded-xl overflow-hidden shadow-2xl border border-zinc-700/50 group">
+          <div className="relative md:rounded-xl overflow-hidden shadow-2xl border border-zinc-700/50 group">
             <video
               ref={videoRef}
               src="https://res.cloudinary.com/dt06yhhea/video/upload/v1745848494/Robotic_Arm_Potrait_Video_voxsnc.mp4"

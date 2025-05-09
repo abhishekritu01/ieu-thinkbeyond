@@ -257,7 +257,7 @@ const sections = [
 
 const HandsOnSchoolHeader = () => {
   return (
-    <div className="w-full min-h-screen p-6 flex flex-col items-center">
+    <div className="w-full min-h-screen p-6 flex flex-col items-center mt-16  md:mt-0">
       {/* Heading */}
       <div className="text-center mb-12 max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white">HANDS ON SCHOOL</h2>
@@ -273,7 +273,7 @@ const HandsOnSchoolHeader = () => {
         {sections.map((section, index) => (
           <div
             key={index}
-            className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-3xl shadow-2xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
+            className="bg-white/10 border border-white/20 backdrop-blur-lg md:rounded-3xl shadow-2xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
           >
             {/* Image */}
             <div className="w-full h-64 relative mb-4 rounded-lg scale-100">
@@ -281,9 +281,9 @@ const HandsOnSchoolHeader = () => {
                 src={section.image}
                 alt={section.imageAlt}
                 layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
+                // className="rounded-lg"
                 priority
+                className="rounded-lg scale-100 transition-transform duration-300 transform hover:scale-105"
               />
             </div>
 

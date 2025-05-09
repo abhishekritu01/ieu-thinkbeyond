@@ -118,11 +118,11 @@ export default function FullscreenCarousel() {
       >
         {imagesToRender.map((course) => (
           <SwiperSlide key={course.id}>
-            <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full h-96 py-1 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] md:rounded-lg shadow-lg">
               <img
                 src={course.image}
                 alt={`Course ${course.id}`}
-                className="w-full h-full object-contain rounded-lg"
+                className="w-full h-full object-scale-down  md:object-fill md:rounded-lg"
                 loading="lazy"
               />
             </div>

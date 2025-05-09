@@ -358,7 +358,7 @@ const Footer = () => {
   return (
     <>
       {/* Banner section with WhatsApp button */}
-      <div className="relative w-full h-28 md:h-64 overflow-hidden -mt-24 md:mt-0">
+      <div className="relative w-full h-28 md:h-64 overflow-hidden mt-24 md:mt-0">
         {/* Banner image */}
         <img
           src="/banner.png"
@@ -383,9 +383,9 @@ const Footer = () => {
           href="https://wa.me/+918951258207"
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"
-          className="flex items-center gap-2 px-8 py-2 text-sm font-medium bg-green-500 text-white  shadow hover:bg-green-600 transition-all group"
+          className=""
         >
-          <FaWhatsapp className="text-lg h-8 w-8 group-hover:scale-110 transition-transform" />
+          <FaWhatsapp className="text-lg h-12 w-12  transition-transform bg-green-500" />
         </a>
       </div>
 
@@ -442,8 +442,9 @@ const Footer = () => {
                     </a>
                   </div>
                 </li>
-                <li className="flex flex-col sm:flex-row items-center sm:items-start justify-center md:justify-start text-center sm:text-left">
+                <li className="flex gap-2 sm:flex-row items-center sm:items-start justify-center md:justify-start text-center sm:text-left">
                   <FaEnvelope className="mb-1 sm:mr-3 text-red-400 text-lg hidden sm:block" />
+                  <FaEnvelope className="mb-1 sm:mr-3 text-red-400 text-lg block sm:hidden" />
                   <a
                     href="mailto:Connect@ieu.org.in"
                     className="hover:text-red-400 transition-colors"

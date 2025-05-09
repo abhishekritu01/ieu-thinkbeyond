@@ -12,7 +12,7 @@ const StudentTestimonial = () => {
     {
       name: 'Pradyumna Gururaj',
       role: 'Founder, Software IT Consultancy',
-      quote: "I'm Pradyumna 8 th grade student, one of the first prodigy students At IEU. \nAfter the program, I was able to build my skills in tech and branding to build my own Software IT Consultancy offering solutions now worldwide. All thanks to IEU.",
+      quote: "I'm Pradyumna 8th grade student, one of the first prodigy students At IEU. \nAfter the program, I was able to build my skills in tech and branding to build my own Software IT Consultancy offering solutions now worldwide. All thanks to IEU.",
       avatar: 'PG',
       bgColor: 'bg-blue-500',
     },
@@ -100,12 +100,12 @@ const StudentTestimonial = () => {
           </div>
 
           {/* Register CTA */}
-          <div className="mt-8 flex justify-center md:justify-start">
+          <div className="flex justify-center mt-8">
             <a
               href="#register"
-              className="inline-flex items-center gap-3 px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 text-white hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 font-medium text-lg"
+              className="flex items-center gap-2 px-4 py-2 rounded-md border border-orange-400 text-orange-300 hover:text-white hover:bg-orange-500/10 hover:shadow-md transition-all duration-300 w-44"
             >
-              <FaUserPlus size={20} /> Register Now
+              <FaUserPlus /> Register Now
             </a>
           </div>
 
