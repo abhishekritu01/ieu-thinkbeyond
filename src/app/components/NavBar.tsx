@@ -130,7 +130,7 @@ const NavBar = () => {
               <FaUserPlus /> <span>Register</span>
             </a>
             <a
-              href="https://wa.me/+918951258207?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs!%0A"
+              href="tel:+918951258207"
               className="flex items-center gap-1 px-3 py-1 rounded-md border border-white text-white  hover:text-white hover:bg-orange-500/10 text-sm"
             >
               <FaPhoneVolume /> <span>Contact</span>
@@ -150,7 +150,7 @@ const NavBar = () => {
             <FaUserPlus /> Register Now
           </a>
           <a
-            href="tel:+8951258207"
+            href="tel:+918951258207"
             className="flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-orange-500/20 border border-orange-400 text-orange-300 hover:text-white text-sm"
             onClick={() => setMenuOpen(false)}
           >
