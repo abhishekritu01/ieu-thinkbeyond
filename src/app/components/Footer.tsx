@@ -406,7 +406,7 @@ const Footer = () => {
       </div> */}
 
       {/* Footer section */}
-      <footer className="bg-black text-gray-300 py-12 sm:py-16 px-4 sm:px-6 border-t border-gray-700">
+      <footer className="bg-black text-gray-300 py-12 sm:py-16 px-4 sm:px-6 border-t border-gray-700 px-4 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Column 1 - Legacy and Logo */}
