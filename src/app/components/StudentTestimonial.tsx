@@ -63,8 +63,8 @@ const StudentTestimonial = () => {
             className="w-full h-full object-fill  duration-500 scale-120 sm:scale-100"
             preload="auto"
           >
-            {/* <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746554421/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" /> */}
-            <source src="/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746554421/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" />
+            {/* <source src="/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" /> */}
             Your browser does not support the video tag.
           </video>
 
@@ -150,8 +150,8 @@ const StudentTestimonial = () => {
             className="w-full h-full object-fill  duration-500 scale-120 sm:scale-100"
             preload="auto"
           >
-            {/* <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746554421/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" /> */}
-            <source src="/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746554421/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" />
+            {/* <source src="/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" /> */}
             Your browser does not support the video tag.
           </video>
 
