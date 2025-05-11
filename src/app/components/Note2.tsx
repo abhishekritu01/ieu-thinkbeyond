@@ -222,23 +222,23 @@ const Note2 = () => {
         <div className="flex-1 space-y-6 text-center md:text-left">
           <div className="flex items-center gap-4 justify-center md:justify-start">
             <FaLightbulb className="text-yellow-400 text-5xl animate-pulse" />
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold ">
               We believe prodigies are not born, but made
             </h1>
           </div>
 
-          <p className="text-gray-300 text-lg sm:text-xl">
+          <p className="text-gray-300 text-lg sm:text-xl ">
             Unlock your potential by registering early. Don&apos;t miss the chance!
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 pt-4 w-full">
-            <span className="border border-white text-white px-4 py-3 text-sm font-medium text-center w-full sm:w-auto">
+          {/* <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 pt-4 w-full">
+            <span className=" text-white px-4 py-3 text-sm font-medium text-center w-full sm:w-auto">
               🎯 Early Bird Access
             </span>
-            <span className="border border-white text-white px-4 py-3 text-sm font-medium text-center w-full sm:w-auto">
+            <span className=" text-white px-4 py-3 text-sm font-medium text-center w-full sm:w-auto">
               ⏳ Limited Seats Available
             </span>
-          </div>
+          </div> */}
 
           <div className="flex flex-col sm:flex-row gap-3 pt-2 w-full">
             <a
@@ -250,7 +250,7 @@ const Note2 = () => {
             </a>
 
             <button 
-              onClick={() => window.open('https://wa.me/+918951258207', '_blank')}
+              onClick={() => window.open('https://wa.me/+918951258207?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs!%0A', '_blank')}
               className="inline-flex items-center justify-center gap-3 border border-white text-white hover:bg-white/10 font-semibold py-3 px-6 transition duration-300 w-full sm:w-auto"
             >
               <FaWhatsapp className="text-green-400" />
@@ -261,14 +261,14 @@ const Note2 = () => {
 
         {/* Right Countdown */}
         <div className="text-center space-y-3">
-          <div className="bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400 px-6 py-4 rounded-xl shadow-lg">
-            <p className="text-lg sm:text-xl font-semibold">
-              ⏰ Only <span className="underline font-bold">{Math.floor(fakeTime / 3600)} hours left</span> to register.
+          <div className="bg-yellow-300 px-6 py-4 rounded-xl shadow-lg">
+            <p className="text-lg sm:text-xl font-semibold text-black">
+              ⏰ Only <span className="underline font-bold ">{Math.floor(fakeTime / 3600)} hours left</span> to register.
             </p>
           </div>
 
           {hasMounted && (
-            <div className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold tracking-wider text-orange-400 drop-shadow-md">
+            <div className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold tracking-wider text-yellow-300 drop-shadow-md">
               {formatFakeTime(fakeTime)}
             </div>
           )}

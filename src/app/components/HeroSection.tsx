@@ -164,8 +164,8 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative flex flex-col flex-col-reverse mt-16 lg:flex-row text-white mt-8">
-      <div className="w-full lg:w-1/2 h-screen flex items-center justify-center px-6 lg:px-12 bg-black -mt-32  md:mt-0">
+    <section className="relative flex flex-col flex-col-reverse mt-16 lg:flex-row text-white ">
+      <div className="w-full lg:w-1/2 h-screen flex items-center justify-center px-0 lg:px-4 bg-black -mt-12  md:mt-0">
         {/* <div className={`transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'} space-y-3 max-w-xl`}>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white font-sans"><span className="text-white">World&apos;s <span className='text-7xl'>1</span>st<br /></span></h1>
           <h1 className="text-4xl sm:text-5xl lg:text-3xl font-bold text-white">FULLY HANDS-ON SCHOOL</h1>
@@ -211,7 +211,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted={isMuted}
-          className={`w-auto h-auto object-cover transition-opacity duration-500 -mt-16 scale-80 rounded-2xl ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-auto h-auto object-cover transition-opacity duration-500 md:-mt-16 scale-95 md:scale-80 rounded-sm ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
           playsInline
           controls={autoplayFailed}
           preload="auto"
@@ -223,7 +223,7 @@ const HeroSection = () => {
         {/* Mute Button */}
         <button
           onClick={handleMuteToggle}
-          className="absolute top-4 -mt-8 md:-mt-4 md:top-12 right-12 md:right-20 z-20 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm"
+          className="absolute top-1 mt-4 md:-mt-4 md:top-12 right-4 md:right-20 z-20 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm"
           aria-label={isMuted ? 'Unmute video' : 'Mute video'}
         >
           {isMuted ? (

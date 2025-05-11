@@ -346,6 +346,7 @@
 
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   FaEnvelope,
   FaInstagram,
@@ -354,43 +355,58 @@ import {
   FaWhatsapp,
 } from 'react-icons/fa';
 
+import { FaYoutube } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+
 const Footer = () => {
   return (
     <>
       {/* Banner section with WhatsApp button */}
-      <div className="relative w-full h-28 md:h-64 overflow-hidden mt-24 md:mt-0">
+      <div className="relative w-auto  h-28 md:h-64 overflow-hidden mt-12 md:mt-4 my-8">
         {/* Banner image */}
-        <img
-          src="/banner.png"
-          alt="Footer Background"
-          className="w-full h-full object-scale-down md:object-scale-down pointer-events-none"
-        />
-        
+        <Link
+          href="https://wa.me/+918951258207?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs!%0A"
+          className="absolute inset-0 w-full h-full">
+          <img
+            src="/banner.png"
+            alt="Footer Background"
+            className="max-w-full h-16 md:h-full pointer-events-none"
+          />
+        </Link>
+
+        {/* WhatsApp button - Mobile */}
+
         {/* WhatsApp button - Desktop */}
         <a
-          href="https://wa.me/+918951258207"
+          href="https://wa.me/+918951258207?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs!%0A"
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"
-          className="absolute right-[10%] bottom-[30%] z-30 hidden md:flex items-center gap-2 px-4 py-2 text-base font-medium bg-green-500 text-white rounded-full shadow hover:bg-green-600 transition-all group"
+          className="absolute right-[.3%] sm:right-[2%] sm:bottom-[23%] z-30  md:flex items-center gap-2 px-4 py-2 text-base font-medium  text-white transition-all group"
         >
-          <FaWhatsapp className="text-lg h-24 w-24 group-hover:scale-110 transition-transform" />
+          <FaWhatsapp className="sm:h-32 sm:w-32 h-12 w-12 text-black" />
         </a>
       </div>
 
+
+
+      <div className='text-white underline text-center text:xl md:text-2xl font-semibold my-4 -mt-16 sm:mt-0'>
+        Click the Phone Icon Above
+      </div>
+
       {/* WhatsApp button - Mobile (positioned below banner) */}
-      <div className="w-full flex justify-center md:hidden py-4 bg-black">
+      {/* <div className="w-full flex justify-center md:hidden py-4 bg-black">
         <a
           href="https://wa.me/+918951258207"
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"
           className=""
         >
-          <FaWhatsapp className="text-lg h-12 w-12  transition-transform bg-green-500" />
+          <FaWhatsapp className="h-12 w-12  transition-transform text-yellow-300" />
         </a>
-      </div>
+      </div> */}
 
       {/* Footer section */}
-      <footer className="bg-black text-gray-300 py-12 px-4 sm:px-6 border-t border-gray-700">
+      <footer className="bg-black text-gray-300 py-12 sm:py-16 px-4 sm:px-6 border-t border-gray-700">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Column 1 - Legacy and Logo */}
@@ -420,8 +436,8 @@ const Footer = () => {
             </div>
 
             {/* Column 2 - Contact Details and Address */}
-            <div className="text-center md:text-left   -mt-24 md:mt-0">
-              <h4 className="text-white font-semibold text-lg mb-4">
+            <div className="text-center md:text-left -mt-24 md:mt-0 ml-0 sm:ml-16">
+              <h4 className="text-white font-semibold text-2xl mb-4">
                 Contact Us
               </h4>
               <ul className="space-y-4 text-sm">
@@ -468,31 +484,60 @@ const Footer = () => {
             </div>
 
             {/* Column 3 - Social Media Links */}
-            <div className="flex flex-col items-center md:items-end text-center md:text-right">
-              <h4 className="text-white font-semibold text-lg mb-4">
+            <div className="flex flex-col items-center md:items-end text-center md:text-right ">
+              <h4 className="text-white font-semibold text-2xl mb-4">
                 Connect with Us
               </h4>
-              <div className="flex flex-col space-y-4 w-full max-w-[250px]">
+              <div className="flex gap-8  space-y-4 w-full max-w-[250px] -ml-12 sm:mr-0">
                 <a
-                  href="https://wa.me/+918951258207"
+                  href="https://wa.me/+918951258207?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs!%0A"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Chat with us on WhatsApp"
-                  className="flex items-center justify-center md:justify-end text-white hover:text-green-300 transition-colors group"
+                  aria-label="WhatsApp"
+                  className="flex items-center justify-center text-white hover:text-green-400 transition-colors group"
                 >
-                  <FaWhatsapp className="mr-2 text-lg group-hover:scale-110 transition-transform" />
-                  <span>Chat on WhatsApp</span>
+                  <FaWhatsapp className="text-5xl group-hover:scale-110 transition-transform text-green-600" />
                 </a>
+
                 <a
                   href="https://www.instagram.com/i.e.u_edu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Follow us on Instagram"
-                  className="flex items-center justify-center md:justify-end text-white hover:text-pink-300 transition-colors group"
+                  aria-label="Instagram"
+                  className="flex items-center justify-center text-white hover:text-pink-400 transition-colors group"
                 >
-                  <FaInstagram className="mr-2 text-lg group-hover:scale-110 transition-transform" />
-                  <span>Follow on Instagram</span>
+                  <FaInstagram className="text-5xl group-hover:scale-110 transition-transform text-pink-600" />
                 </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="flex items-center justify-center text-white hover:text-red-600 transition-colors group"
+                >
+                  <FaYoutube className="text-5xl group-hover:scale-110 transition-transform text-red-600" />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Google"
+                  className="flex items-center justify-center text-white hover:text-red-400 transition-colors group -mt-2"
+                >
+                  <FcGoogle className="text-5xl group-hover:scale-110 transition-transform " />
+                </a>
+              </div>
+              <div className="text-white text-sm md:mt-32 ml-36 md:ml-44">
+           
+                <Image
+                  src="/THINK BEYOND LOGO (2).png"
+                  alt="IEU Logo"
+                  width={300}
+                  height={20}
+                  priority
+                  className="object-fill max-w-full hover:scale-105 transition-transform  mt-0 md:-mt-32  -ml-16"
+                />
+
               </div>
             </div>
           </div>

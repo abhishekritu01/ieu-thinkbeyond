@@ -47,11 +47,38 @@ const StudentTestimonial = () => {
   }, [testimonials.length]);
 
   return (
-    <section className="relative py-16 px-6 md:px-10 lg:px-20 min-h-[500px] flex items-center">
+    <section className="relative py-16 px-6 md:px-10 lg:px-20 min-h-[500px]">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 bg-[url('/pattern.svg')] bg-repeat z-0" />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center flex-col-reverseddd md:flex-row">
+         {/* Right: Video Section */}
+        <div className="relative w-auto rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700 hover:scale-[1.01] transition-transform duration-300 block sm:hidden">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted={isMuted}
+            playsInline
+            className="w-full h-full object-fill  duration-500 scale-120 sm:scale-100"
+            preload="auto"
+          >
+            <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746554421/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <button
+            onClick={toggleMute}
+            className="absolute bottom-4 right-4 z-10 p-3 bg-black/70 rounded-full hover:bg-black transition-all group"
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
+          >
+            {isMuted ? (
+              <FaVolumeMute size={20} className="text-white group-hover:text-yellow-400" />
+            ) : (
+              <FaVolumeUp size={20} className="text-white group-hover:text-yellow-400" />
+            )}
+          </button>
+        </div>
         {/* Left: Testimonial Content */}
         <div className="text-white space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold">
@@ -112,14 +139,14 @@ const StudentTestimonial = () => {
         </div>
 
         {/* Right: Video Section */}
-        <div className="relative w-auto rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700 hover:scale-[1.01] transition-transform duration-300">
+        <div className="relative w-auto rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700 hover:scale-[1.01] transition-transform duration-300 hidden sm:block">
           <video
             ref={videoRef}
             autoPlay
             loop
             muted={isMuted}
             playsInline
-            className="w-full h-full object-fill  duration-500"
+            className="w-full h-full object-fill  duration-500 scale-120 sm:scale-100"
             preload="auto"
           >
             <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746554421/IEU_LP_student_testimonials_Video_yomx6c.mp4" type="video/mp4" />

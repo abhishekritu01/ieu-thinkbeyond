@@ -226,7 +226,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FaLightbulb, FaRocket, FaBookOpen, FaUserPlus } from 'react-icons/fa';
+import { FaLightbulb, FaQuestion, FaRocket, FaUserPlus } from 'react-icons/fa';
 
 const sections = [
   {
@@ -240,7 +240,7 @@ const sections = [
   {
     title: 'UNDERSTANDING “WHAT”, “HOW” & “WHY”',
     image: '/3.png',
-    icon: <FaBookOpen className="text-4xl text-blue-500" />,
+    icon: <FaQuestion className="text-4xl text-white" />,
     imageAlt: 'Understanding Concepts',
     content:
       "Our curriculum focuses on ensuring students grasp the fundamental concepts by dwelling into the 'what' by building the 'how' and by making the students ask the 'why'.",
@@ -251,13 +251,13 @@ const sections = [
     icon: <FaRocket className="text-4xl text-red-500" />,
     imageAlt: 'Future Learning',
     content:
-      'We deliver relevant skills with industry-oriented hands-on subjects that ensure students are ready for the future. Our curriculum transforms learning with a holistic approach like no other in the world.',
+      'We deliver relevant skills with industry-oriented hands-on subjects that ensure students are ready for the future. Our curriculum transforms learning with a holistic approach like  no other in the world.',
   },
 ];
 
 const HandsOnSchoolHeader = () => {
   return (
-    <div className="w-full min-h-screen p-6 flex flex-col items-center mt-16  md:mt-0">
+    <div className="w-full min-h-screen p-6 flex flex-col items-center mt-4  md:mt-0">
       {/* Heading */}
       <div className="text-center mb-12 max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white">HANDS ON SCHOOL</h2>
@@ -269,26 +269,28 @@ const HandsOnSchoolHeader = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {sections.map((section, index) => (
           <div
             key={index}
-            className="bg-white/10 border border-white/20 backdrop-blur-lg md:rounded-3xl shadow-2xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
+            className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-lg md:rounded shadow-2xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
           >
             {/* Image */}
-            <div className="w-full h-64 relative mb-4 rounded-lg scale-100">
+            <div className="w-full h-64 relative mb-4  ">
               <Image
                 src={section.image}
                 alt={section.imageAlt}
                 layout="fill"
                 // className="rounded-lg"
                 priority
-                className="rounded-lg scale-100 transition-transform duration-300 transform hover:scale-105"
+                className="rounded scale-105 transition-transform duration-300 transform hover:scale-105"
               />
             </div>
 
             {/* Icon */}
-            {section.icon}
+            <div className='py-2 md:py-4'>
+              {section.icon}
+            </div>
 
             {/* Title */}
             <h3 className="text-xl font-semibold mt-4 mb-2 text-white">{section.title}</h3>
