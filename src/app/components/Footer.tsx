@@ -506,10 +506,11 @@ const Footer = () => {
                   aria-label="Instagram"
                   className="flex items-center justify-center text-white hover:text-pink-400 transition-colors group"
                 >
-                  <FaInstagram className="text-5xl group-hover:scale-110 transition-transform text-pink-600" />
+                <FaInstagram className="text-5xl group-hover:scale-110 transition-transform text-pink-500" />
+
                 </a>
                 <a
-                  href="#"
+                  href="https://youtube.com/@thinkbeyond5360?si=V4ExiNbGw6a0P1Jy"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
@@ -518,7 +519,7 @@ const Footer = () => {
                   <FaYoutube className="text-5xl group-hover:scale-110 transition-transform text-red-600" />
                 </a>
                 <a
-                  href="#"
+                  href="https://g.co/kgs/9sJDy7R"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Google"
@@ -527,17 +528,25 @@ const Footer = () => {
                   <FcGoogle className="text-5xl group-hover:scale-110 transition-transform " />
                 </a>
               </div>
-              <div className="text-white text-sm md:mt-32 ml-36 md:ml-44">
-           
+              <div className="text-white text-sm md:mt-40 ml-36 md:ml-44">
+
                 <Image
-                  src="/THINK BEYOND LOGO (2).png"
+                  src="/finallogo2.png"
                   alt="IEU Logo"
                   width={300}
                   height={20}
                   priority
-                  className="object-fill max-w-full hover:scale-105 transition-transform  mt-0 md:-mt-32  -ml-16"
+                  className="object-fill max-w-full hover:scale-105 transition-transform mt-0 md:-mt-32  hidden sm:block"
                 />
 
+                <Image
+                  src="/mobilelogo2.png"
+                  alt="IEU Logo"
+                  width={300} // Adjust width for mobile view
+                  height={10} // Adjust height for mobile view
+                  priority
+                  className="object-fill max-w-full hover:scale-105 transition-transform mt-8 -ml-16 block sm:hidden"
+                />
               </div>
             </div>
           </div>
