@@ -268,7 +268,7 @@ const Note2 = () => {
           </div>
 
           {hasMounted && (
-            <div className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold tracking-wider text-yellow-300 drop-shadow-md">
+            <div className="text-3xl sm:text-5xl lg:text-6xl font-mono font-bold tracking-wider text-yellow-300 drop-shadow-md">
               {formatFakeTime(fakeTime)}
             </div>
           )}
