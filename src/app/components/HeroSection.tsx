@@ -211,19 +211,20 @@ const HeroSection = () => {
           autoPlay
           loop
           muted={isMuted}
-          className={`w-auto h-auto object-cover transition-opacity duration-500 md:-mt-16 scale-95 md:scale-80 rounded-sm ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-auto h-auto object-cover transition-opacity duration-500 md:-mt-16 scale-95 md:scale-85 rounded-sm ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
           playsInline
           controls={autoplayFailed}
           preload="auto"
         >
-          <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746078541/IEU_Intro_Founder_ewywnc.mov" type="video/mp4" />
+          {/* <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746078541/IEU_Intro_Founder_ewywnc.mov" type="video/mp4" /> */}
+          <source src="https://res.cloudinary.com/dt06yhhea/video/upload/v1746954210/Video_2_1_awgxri.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         {/* Mute Button */}
         <button
           onClick={handleMuteToggle}
-          className="absolute top-1 mt-4 md:-mt-4 md:top-12 right-4 md:right-20 z-20 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm"
+          className="absolute top-1 mt-4 md:-mt-4 md:top-8 right-4 md:right-24 z-20 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm"
           aria-label={isMuted ? 'Unmute video' : 'Mute video'}
         >
           {isMuted ? (

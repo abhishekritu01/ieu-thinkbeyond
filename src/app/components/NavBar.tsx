@@ -130,7 +130,7 @@ const NavBar = () => {
               <FaUserPlus /> <span>Register</span>
             </a>
             <a
-              href="tel:+8951258207"
+              href="https://wa.me/+918951258207?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20programs!%0A"
               className="flex items-center gap-1 px-3 py-1 rounded-md border border-white text-white  hover:text-white hover:bg-orange-500/10 text-sm"
             >
               <FaPhoneVolume /> <span>Contact</span>

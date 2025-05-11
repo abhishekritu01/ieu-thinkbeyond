@@ -211,11 +211,11 @@ const Note2 = () => {
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
 
-    return `${hours}h ${minutes.toString().padStart(2, '0')}m ${seconds.toString().padStart(2, '0')}s`;
+    return `${hours}h ${minutes.toString().padStart(2, '0')}s ${seconds.toString().padStart(2, '0')}ms`;
   };
 
   return (
-    <section className="w-full min-h-[80vh] bg-black text-white flex items-center justify-center px-6 -mt-2 md:mt-24">
+    <section className="w-full min-h-[80vh] bg-black text-white flex items-center justify-center px-6 -mt-8 md:mt-4">
       <div className="w-full max-w-7xl bg-white/10 border border-white/20 backdrop-blur-lg md:rounded-3xl shadow-2xl overflow-hidden p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
         {/* Left Content */}
