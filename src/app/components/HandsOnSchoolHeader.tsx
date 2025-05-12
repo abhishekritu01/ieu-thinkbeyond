@@ -260,7 +260,9 @@ const HandsOnSchoolHeader = () => {
     <div className="w-full min-h-screen p-6 flex flex-col items-center mt-4  md:mt-0">
       {/* Heading */}
       <div className="text-center mb-12 max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">HANDS ON SCHOOL</h2>
+        {/* <h2 className="text-3xl md:text-4xl font-bold text-white">HANDS ON SCHOOL!</h2> */}
+        <h2 className="text-3xl md:text-4xl font-bold text-white">HANDS-ON-SCHOOL</h2>
+
         <p className="mt-4 text-lg text-gray-300">
           At IEU we do more than just teaching.
           <br />
