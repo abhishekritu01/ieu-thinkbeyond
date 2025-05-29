@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Tag for Ads */}
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
@@ -44,22 +45,39 @@ export default function RootLayout({
           }}
         />
       </head>
+
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Custom Click + Form Tracking */}
         <Script
-          id="custom-conversion-tracking"
+          id="custom-event-tracking"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               document.addEventListener('click', function(e) {
                 if (e.target.closest('a[href*="register"]')) {
-                  gtag('event', 'conversion', {'send_to': 'AW-17086159771/Y5PnCOmaxc4aEJu3qNM_'});
+                  gtag('event', 'conversion', {
+                    send_to: 'AW-17086159771/Y5PnCOmaxc4aEJu3qNM_'
+                  });
                 }
                 if (e.target.closest('a[href*="/wa.me/+918951258207"]')) {
-                  gtag('event', 'conversion', {'send_to': 'AW-17086159771/bvKqCOaaxc4aEJu3qNM_'});
+                  gtag('event', 'conversion', {
+                    send_to: 'AW-17086159771/bvKqCOaaxc4aEJu3qNM_'
+                  });
                 }
-                if (e.target.closest('button') && e.target.innerText.toLowerCase().includes('register now')) {
-                  gtag('event', 'conversion', {'send_to': 'AW-17086159771/LoObCOOaxc4aEJu3qNM_'});
+                if (
+                  e.target.closest('button') &&
+                  e.target.innerText.toLowerCase().includes('register now')
+                ) {
+                  gtag('event', 'conversion', {
+                    send_to: 'AW-17086159771/LoObCOOaxc4aEJu3qNM_'
+                  });
                 }
+              });
+
+              document.addEventListener('submit', function(e) {
+                gtag('event', 'form_submit', {
+                  send_to: 'AW-17086159771/FORM_SUBMIT_EVENT_ID'
+                });
               });
             `,
           }}
